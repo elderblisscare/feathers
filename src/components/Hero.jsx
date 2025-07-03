@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden bg-[#f5f5f5]">
       {/* Container with rounded corners */}
-      <div className="absolute inset-0 flex items-center justify-center px-4 py-10 md:py-16 lg:py-46">
+      <div className="absolute inset-0 flex items-center justify-center px-4 py-10 md:py-16 lg:py-96">
         <div className="relative w-full max-w-[1280px] h-[85vh] rounded-2xl overflow-hidden">
           {/* Video Background */}
           <video 

@@ -5,16 +5,18 @@ import About from '../components/About';
 import Locations from '../components/Locations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+
+
 const HomePage = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className='pt-20'>
         <Hero />
         <About />
         <Locations />
         <Contact />
-        <Footer/>
+        <Footer />
       </main>
     </>
   );

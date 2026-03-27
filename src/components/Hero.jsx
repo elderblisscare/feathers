@@ -27,12 +27,12 @@ const Hero = () => {
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden bg-[#f5f5f5]">
       {/* Container with rounded corners */}
-      <div className="absolute inset-0 flex items-center justify-center px-4 py-10 md:py-16 lg:py-85">
-        <div className="relative w-full max-w-[1280px] h-[85vh] rounded-2xl overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center px-4 py-10 md:py-16 lg:py-85 ">
+        <div className="relative w-full max-w-[1280px] h-[85vh] rounded-2xl overflow-hidden ">
           {/* Video Background */}
           <video 
             ref={videoRef}
-            className="absolute top-0 left-0 w-full h-full object-cover z-10"
+            className="absolute top-0 left-0 w-full h-full object-cover z-10 "
             autoPlay 
             muted 
             loop
@@ -55,7 +55,7 @@ const Hero = () => {
                 FEATHERS
               </div>
               <div className="font-serif text-xl md:text-3xl lg:text-3xl tracking-wider mb-2 md:mb-3">
-                Healthcare For All
+               Smart, Reliable Healthcare for Every Stage of Life.
               </div>
             </h1>
           </div>

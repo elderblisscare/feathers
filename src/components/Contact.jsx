@@ -155,7 +155,7 @@ const Contact = () => {
                 </div>
                 <div className="pt-0.5">
                   <h4 className="font-cormorant text-lg font-medium text-white">Phone</h4>
-                  <a href="tel:+18005551234" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">(+91)</a>
+                  <a href="tel:+18005551234" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">(+91) 7982363899</a>
                 </div>
               </div>
             </div>

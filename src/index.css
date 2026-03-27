@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Canela:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import "tailwindcss";
 
 /* @font-face {
@@ -15,6 +15,10 @@
     --periwinkle: #8aa6c9;
     --white: white;
     --giulia-blue: #8aa6c9;
+}
+
+@theme{
+    --font-display: "Kaushan Script", cursive;
 }
 
 html,

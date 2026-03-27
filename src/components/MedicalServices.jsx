@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MedicalServices = () => {
   const sectionRef = useRef(null);
   const contentRef = useRef(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Heading animation
@@ -95,8 +98,11 @@ const MedicalServices = () => {
               </div>
               <h3 className="font-cormorant text-2xl font-semibold text-[#1C4571] mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
-              <button className="self-start mt-auto text-[#1C4571] font-semibold hover:text-[#ff8c39] transition-colors flex items-center">
-                Learn more
+              <button 
+              onClick={() => navigate("/inquiry", { state: { service: service.title } })}
+              //  onClick={() => navigate("/inquiry")} 
+               className="self-start mt-auto text-[#1C4571] font-semibold hover:text-[#3c80c8] transition-colors flex items-center">
+                Inquire
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -8,6 +9,8 @@ const HomecareServices = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const cardsRef = useRef(null);
+
+   const navigate = useNavigate();
 
   useEffect(() => {
     // Heading animation
@@ -97,7 +100,9 @@ const HomecareServices = () => {
                 <div className="p-8 md:w-3/4">
                   <h3 className="font-cormorant text-2xl font-semibold text-[#1C4571] mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-5">{service.description}</p>
-                  <button className="px-5 py-2 bg-[#1C4571] text-white rounded-lg hover:bg-[#153454] transition-colors">
+                  <button
+                    onClick={() => navigate("/inquiry", { state: { service: service.title } })}
+                   className="px-5 py-2 bg-[#1C4571] text-white rounded-lg hover:bg-[#3c80c8] transition-colors">
                     Book Service
                   </button>
                 </div>

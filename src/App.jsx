@@ -11,7 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ScrollToTop from "./components/ScrollToTop";
 import InquiryForm from "./components/InquiryForm";
-import InquirePage from "./pages/inquirePage";
+import InquirePage from "./pages/InquirePage";
 import AllServicesPage from "./pages/AllServicesPage";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, Observer);

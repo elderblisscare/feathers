@@ -5,6 +5,7 @@ import About from '../components/About';
 import Locations from '../components/Locations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Testimonials from '../components/Testimonials';
 
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
         <Hero />
         <About />
         <Locations />
+        <Testimonials/>
         <Contact />
         <Footer />
       </main>

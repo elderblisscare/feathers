@@ -135,20 +135,37 @@ const InquiryForm = () => {
     };
 
     // 🔹 Submit
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        alert("Your request has been submitted!");
-        //  RESET FORM
-        setFormData({
-            name: "",
-            phone: "",
-            email: "",
-            service: "",
-            message: "",
-        });
 
+        try {
+            const res = await fetch("http://localhost:5000/api/booking", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            alert(data.message || "Booking submitted ✅");
+
+            // Reset form
+            setFormData({
+                name: "",
+                phone: "",
+                email: "",
+                service: "",
+                message: "",
+            });
+
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong ❌");
+        }
     };
+
 
     return (
         <section className="py-16 px-4 bg-gray-50 min-h-screen flex items-center">

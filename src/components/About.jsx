@@ -122,7 +122,7 @@ const About = () => {
       {/* 🔸 Section 2 (Image Left, Text Right) */}
       <AboutBlock
         reverse={true}
-        image="doctors.jpg"
+        image="about-img2.jpg"
         title="Quality Care You Can Trust"
         subtitle="Dedicated to Your Health & Wellbeing"
         text1="We bring professional medical care directly to your home with a focus on comfort, dignity, and personalized attention."

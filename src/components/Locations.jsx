@@ -418,7 +418,7 @@ const LocationCard = ({ title, subtitle, image, addToRefs }) => {
 
        <Link to="/inquiry">
        <button className="bg-[#1C4571] text-white px-6 py-2 rounded-md shadow-md hover:bg-[#cfdff3] hover:text-[#1C4571] transition">
-          Click here
+          Book Now
         </button>
         </Link>
 

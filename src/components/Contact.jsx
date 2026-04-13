@@ -10,6 +10,7 @@ const Contact = () => {
   const infoRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     email: "",
     subject: "",
     message: "",
@@ -24,6 +25,12 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // ✅ Phone validation FIRST
+    if (formData.phone.length !== 10) {
+      alert("Please enter valid 10-digit phone number ❌");
+      return;
+    }
 
     try {
       const res = await fetch("http://localhost:5000/api/contact", {
@@ -41,6 +48,7 @@ const Contact = () => {
       // reset form
       setFormData({
         name: "",
+        phone: "",
         email: "",
         subject: "",
         message: "",
@@ -264,6 +272,40 @@ const Contact = () => {
                 </div>
 
                 <div className="form-group">
+                  <label htmlFor="phone" className="block text-gray-700 font-medium mb-1 text-xs">
+                    Phone Number
+                  </label>
+
+                  <div className="relative group">
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={formData.phone}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, ""); // only digits
+                        setFormData({ ...formData, phone: value });
+                      }}
+                      className="w-full border border-gray-200 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571] transition-all bg-white/80 hover:bg-white"
+                      placeholder="9876543210"
+                      maxLength="10"
+                      required
+                    />
+
+                    {/* Phone Icon */}
+                    <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-[#1C4571] transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M2 3a1 1 0 011-1h2.28a1 1 0 01.95.68l1.12 3.36a1 1 0 01-.27 1.02L5.91 8.91a11.05 11.05 0 005.18 5.18l1.85-1.17a1 1 0 011.02-.27l3.36 1.12a1 1 0 01.68.95V21a1 1 0 01-1 1h-1C7.82 22 2 16.18 2 9V3z" />
+                      </svg>
+                    </div>
+                  </div>
+                  {formData.phone.length > 0 && formData.phone.length < 10 && (
+                    <p className="text-red-500 text-xs mt-1">
+                      Enter valid 10-digit number
+                    </p>
+                  )}
+                </div>
+
+                <div className="form-group">
                   <label htmlFor="email" className="block text-gray-700 font-medium mb-1 text-xs">Your Email</label>
                   <div className="relative group">
                     <input
@@ -336,7 +378,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          
+
           <div className="mt-10 w-full mx-auto rounded-xl overflow-hidden shadow-lg border border-white/10">
             <iframe
               title="Google Map"

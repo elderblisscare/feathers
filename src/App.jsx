@@ -10,9 +10,11 @@ import HomecareServicesPage from "./pages/HomecareServicesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ScrollToTop from "./components/ScrollToTop";
-import InquiryForm from "./components/InquiryForm";
 import InquirePage from "./pages/InquirePage";
 import AllServicesPage from "./pages/AllServicesPage";
+import Term_And_Policy_Page from "./pages/Term_And_Policy_Page";
+import BlogList from "./Blog/BlogsPage/BlogList";
+import BlogDetails from "./Blog/BlogDetails/BlogDetails";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
 
@@ -31,7 +33,7 @@ const App = () => {
       tolerance: 10,
       preventDefault: false
     });
-    
+
     // Refresh ScrollTrigger when route changes
     const refresh = () => {
       setTimeout(() => {
@@ -50,7 +52,7 @@ const App = () => {
 
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <main className="bg-[#f5f5f5]">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -58,8 +60,11 @@ const App = () => {
           <Route path="/medical-services" element={<MedicalServicesPage />} />
           <Route path="/equipment" element={<MedicalEquipmentPage />} />
           <Route path="/homecare" element={<HomecareServicesPage />} />
-          <Route path="/inquiry" element={<InquirePage/>} />
-          <Route path="/our-services" element={<AllServicesPage/>} />
+          <Route path="/inquiry" element={<InquirePage />} />
+          <Route path="/our-services" element={<AllServicesPage />} />
+          <Route path="/blogs" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/terms-and-policies" element={<Term_And_Policy_Page />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

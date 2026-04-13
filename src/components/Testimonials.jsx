@@ -2,19 +2,32 @@ import { useState, useEffect } from "react";
 
 const testimonials = [
   {
-    name: "Rohit Sharma, Noida",
-    text: "ElderBliss provided excellent care for my father. Highly recommended!",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Nitish Arun",
+    text: "Feathers truly came through when my father needed medical attention early in the morning. They quickly arranged a doctor visit and diagnostics at home, making the whole process smooth and stress-free. Their prompt and caring service made all the difference.",
+    location: "Munirka, Delhi",
+    service_taken: "Emergency Doctor Visit",
+    image: "/Testimonials_Img/Nitish_Arun_test.jpeg",
   },
   {
-    name: "Priya Verma, Noida",
-    text: "Very professional staff and great support. Thank you so much!",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Saurabh Das Gupta",
+    text: "Feathers has been a great support for my father, who has mild memory issues. The attendant they provided is exceptionally patient, attentive, and handles him with genuine care and respect. It’s a huge comfort knowing someone trustworthy is there for him when we can’t be, allowing us to focus on our daily lives without added worry.",
+    location: "CR Park, South Delhi",
+    service_taken: "Caregiver Services (Attendant)",
+    image: "/Testimonials_Img/Saurabh_Das_Test.jpg",
   },
   {
-    name: "Amit Kumar, Faridabad",
-    text: "Amazing service. They truly care about patients.",
-    image: "https://randomuser.me/api/portraits/men/76.jpg",
+    name: "Antionette Martin",
+    text: "When my mother needed a doctor late at night, Feathers came through without delay. The doctor arrived quickly, was calm and reassuring, and took great care of her. I truly appreciate their dependable service during such a tense moment.",
+    location: "Jungpura, South Delhi",
+    service_taken: "Doctor Visit",
+    image: "/Testimonials_Img/Antionette_Test.jpg",
+  },
+  {
+    name: "Raminder Kaur",
+    text: "The physiotherapy sessions from Feathers have really helped me regain my strength and mobility. The therapist is gentle, patient, and always encourages me to keep going. I feel more confident and active than I have in a long time.",
+    location: "Gurgaon",
+    service_taken: "Physiotherapy at home",
+    image: "/Testimonials_Img/Raminder_Test.jpg",
   },
 ];
 
@@ -62,6 +75,12 @@ const Testimonials = () => {
                 <h4 className="font-semibold text-[#1C4571]">
                   {item.name}
                 </h4>
+                <h5 className=" text-[#1C4571]">
+                  {item.location}
+                </h5>
+                <h5 className=" text-[#1C4571]">
+                  {item.service_taken}
+                </h5>
               </div>
             </div>
           ))}
@@ -89,9 +108,8 @@ const Testimonials = () => {
           <div
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              current === index ? "bg-[#1C4571]" : "bg-gray-300"
-            }`}
+            className={`w-3 h-3 rounded-full cursor-pointer ${current === index ? "bg-[#1C4571]" : "bg-gray-300"
+              }`}
           ></div>
         ))}
       </div>

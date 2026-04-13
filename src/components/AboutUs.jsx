@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,9 +78,10 @@ const AboutBlock = ({ reverse, image, title, subtitle, text1, text2 }) => {
                             {text2}
                         </p>
 
-                        <button className="border border-blue-600 text-blue-600 px-5 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
+                       <Link to="/our-services"><button className="border border-blue-600 text-blue-600 px-5 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
                             Explore Our Services
                         </button>
+                        </Link> 
                     </div>
 
                     {/* 🔹 IMAGE */}
@@ -108,16 +110,7 @@ const WhyChoose = () => {
         <section className="py-16 md:py-24 px-4 bg-gray-50">
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
 
-                {/* 🔹 IMAGE (LEFT) */}
-                <div className="relative overflow-hidden rounded-xl shadow-lg">
-                    <img
-                        src="doctors.jpg" // change image
-                        alt="Home Healthcare"
-                        className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[500px] object-cover rounded-xl"
-                    />
-                </div>
-
-                {/* 🔹 TEXT (RIGHT) */}
+                                {/* 🔹 TEXT (RIGHT) */}
                 <div className="space-y-6">
 
                     <h2 className="text-3xl md:text-4xl font-serif text-gray-900 leading-tight">
@@ -164,11 +157,23 @@ const WhyChoose = () => {
                     </div>
 
                     {/* 🔹 BUTTON */}
-                    <button className="mt-4 border border-blue-600 text-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
+                 <Link to="/inquiry"> <button className="mt-4 border border-blue-600 text-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
                         Contact Us
                     </button>
+                    </Link>  
 
                 </div>
+
+                {/* 🔹 IMAGE (LEFT) */}
+                <div className="relative overflow-hidden rounded-xl shadow-lg">
+                    <img
+                        src="whychoseimg.jpg" // change image
+                        alt="Home Healthcare"
+                        className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[500px] object-cover rounded-xl"
+                    />
+                </div>
+
+
             </div>
         </section>
     );
@@ -224,7 +229,7 @@ const FounderSection = () => {
   {/* 🔹 IMAGE (1 part) */}
   <div className="md:col-span-1 flex justify-center ">
     <img
-      src="doctors.jpg"
+      src="/Testimonials_Img/deepak_founder.jpg"
       className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover"
     />
   </div>
@@ -358,7 +363,7 @@ const AboutUs = () => {
             {/* 🔸 Section 2 (Image Left, Text Right) */}
             <AboutBlock
                 reverse={true}
-                image="doctors.jpg"
+                image="about-img2.jpg"
                 title="Quality Care You Can Trust"
                 subtitle="Dedicated to Your Health & Wellbeing"
                 text1="We bring professional medical care directly to your home with a focus on comfort, dignity, and personalized attention."

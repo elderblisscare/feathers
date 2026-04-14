@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { blogs } from "../Data/BlogData";
 import Navbar from "../../components/Navbar";
 import Contact from "../../components/Contact";
@@ -47,22 +47,53 @@ export default function BlogDetails() {
                         className="w-full h-100 object-cover rounded-xl"
                     />
 
-
-
-
                     <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
-                        {blog.content.map((para, index) => (
-                            <p key={index}>{para}</p>
-                        ))}
+                        {blog.content.map((item, index) => {
+
+                            if (item.type === "paragraph") {
+                                return <p key={index} className="mb-4">{item.text}</p>;
+                            }
+
+                            if (item.type === "heading") {
+                                return <h2 key={index} className="text-2xl font-bold mt-6">{item.text}</h2>;
+                            }
+
+                            if (item.type === "quote") {
+                                return (
+                                    <blockquote
+                                        key={index}
+                                        className="border-l-4 border-gray-400 pl-4 italic text-gray-600 my-6"
+                                    >
+                                        {item.text}
+                                    </blockquote>
+                                );
+                            }
+
+                            if (item.type === "imageGrid") {
+                                return (
+                                    <div key={index} className="grid grid-cols-3 gap-2 my-6">
+                                        {item.images.map((img, i) => (
+                                            <img key={i} src={img} className="rounded-sm object-cover" />
+                                        ))}
+                                    </div>
+                                );
+                            }
+
+                            return null;
+                        })}
                     </div>
+
+                    {/* <hr className="border-gray-300 my-10" /> */}
+                    <hr className="border-t border-gray-300 my-12" />
+                    {/* <div className="w-24 h-[2px] bg-gray-300 mx-auto my-10"></div> */}
 
                     {/* CTA */}
                     <div className="mt-10 bg-blue-50 p-6 rounded-xl text-center">
                         <h3 className="text-xl font-semibold">Need Care Services?</h3>
                         <p className="text-gray-600 mt-2">We are here to help you and your loved ones.</p>
-                        <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full">
+                        <Link to="/inquiry"><button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full">
                             Contact Us
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
                 <Contact />

@@ -13,7 +13,7 @@ export default function BlogList() {
 
     const filteredBlogs = selectedTag === "ALL" ? blogs : blogs.filter(blog => blog.tags && blog.tags.includes(selectedTag));
 
-    const blogsPerPage = 9;
+    const blogsPerPage = 6;
     const indexOfLastBlog = currentPage * blogsPerPage;
     const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
 
@@ -104,7 +104,7 @@ export default function BlogList() {
                                     <p className="text-xs text-gray-500">{blog.date} | {blog.readTime}</p>
 
                                     {/* Title */}
-                                    <Link to="#"> <h2 className="text-lg font-semibold mt-2 leading-snug hover:text-blue-500">
+                                    <Link  to={`/blog/${blog.id}`}> <h2 className="text-lg font-semibold mt-2 leading-snug hover:text-blue-500">
                                         {blog.title}
                                     </h2>
                                     </Link>
@@ -121,7 +121,7 @@ export default function BlogList() {
                                             alt="author"
                                             className="w-6 h-6 rounded-full"
                                         />
-                                        <span className="text-sm text-gray-700">
+                                        <span className="text-sm font-medium text-gray-900">
                                             By {blog.author}
                                         </span>
                                     </div>

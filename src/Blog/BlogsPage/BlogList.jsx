@@ -10,6 +10,18 @@ export default function BlogList() {
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedTag, setSelectedTag] = useState("ALL");
 
+    const tags = [
+        "ALL",
+        "HEALTHCARE",
+        "AMBULANCE",
+        "CONVENIENCE",
+        "EMERGENCY",
+        "HOME CARE ATTENDANT",
+        "LIFESTYLE",
+        "NURSE",
+        "PHYSIOTHERAPY"
+    ];
+
 
     const filteredBlogs = selectedTag === "ALL" ? blogs : blogs.filter(blog => blog.tags && blog.tags.includes(selectedTag));
 
@@ -28,14 +40,14 @@ export default function BlogList() {
                         Latest Blogs
                     </h1>
 
-                    <div className="flex justify-center items-center gap-4 mt-8 mb-10 rounded-full border border-blue-400 bg-gradient-to-br from-blue-100 to-white">
+                    {/* <div className="flex justify-center items-center gap-4 mt-8 mb-10 rounded-full border border-blue-400 bg-gradient-to-br from-blue-100 to-white">
 
                         <button
                             onClick={() => {
                                 setSelectedTag("ALL");
                                 setCurrentPage(1);
                             }}
-                            className={`p-4 m-6 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "ALL"
+                            className={`p-4 m-2 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "ALL"
                                 ? "bg-blue-600 text-white scale-105 shadow-lg"
                                 : "bg-blue-900 text-white hover:bg-blue-950"
                                 }`}
@@ -47,7 +59,7 @@ export default function BlogList() {
                                 setSelectedTag("HEALTHCARE");
                                 setCurrentPage(1);
                             }}
-                            className={`p-4 m-6 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "HEALTHCARE"
+                            className={`p-4 m-2 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "HEALTHCARE"
                                 ? "bg-blue-600 text-white scale-105 shadow-lg"
                                 : "bg-blue-900 text-white hover:bg-blue-950"
                                 }`}
@@ -59,16 +71,40 @@ export default function BlogList() {
                                 setSelectedTag("BUSINESS");
                                 setCurrentPage(1);
                             }}
-                            className={`p-4 m-6 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "BUSINESS"
+                            className={`p-4 m-2 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "BUSINESS"
                                 ? "bg-blue-600 text-white scale-105 shadow-lg"
                                 : "bg-blue-900 text-white hover:bg-blue-950"
                                 }`}
                         >
                             BUSINESS
                         </button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <button>Ambulance</button>
+                        <button>Convenience</button>
+                        <button>Emergency</button>
+                        <button>Home Care Attendant</button>
+                        <button>Lifestyle</button>
+                        <button>Nurse</button>
+                        <button>Physiotherapy</button>
+                    </div> */}
+
+            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-6 md:mt-8 mb-8 md:mb-10 rounded-2xl border border-blue-400 bg-gradient-to-br from-blue-100 to-white p-2 sm:p-3 md:p-4">
+
+                        {tags.map((tag) => (
+                            <button
+                                key={tag}
+                                onClick={() => {
+                                    setSelectedTag(tag);
+                                    setCurrentPage(1);
+                                }}
+                                className={`px-4 py-2 font-semibold rounded-full border transition-all duration-300 transform hover:scale-105 ${selectedTag === tag
+                                    ? "bg-blue-600 text-white scale-105 shadow-lg"
+                                    : "bg-blue-900 text-white hover:bg-blue-950"
+                                    }`}
+                            >
+                                {tag}
+                            </button>
+                        ))}
+
                     </div>
 
                     <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 ">
@@ -104,7 +140,7 @@ export default function BlogList() {
                                     <p className="text-xs text-gray-500">{blog.date} | {blog.readTime}</p>
 
                                     {/* Title */}
-                                    <Link  to={`/blog/${blog.id}`}> <h2 className="text-lg font-semibold mt-2 leading-snug hover:text-blue-500">
+                                    <Link to={`/blog/${blog.id}`}> <h2 className="text-lg font-semibold mt-2 leading-snug hover:text-blue-500">
                                         {blog.title}
                                     </h2>
                                     </Link>

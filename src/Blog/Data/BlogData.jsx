@@ -7,7 +7,7 @@ export const blogs = [
         date: "April 14, 2026",
         author: "Team Feathers",
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
-        tags: ["BUSINESS", "LIFESTYLE", "HEALTHCARE"],
+        tags: ["LIFESTYLE", "HEALTHCARE"],
         content: [
             { type: "paragraph", text: "Taking care of elderly people requires patience and love." },
             { type: "paragraph", text: "Ensure proper diet and regular health checkups." },

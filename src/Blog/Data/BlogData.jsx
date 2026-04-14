@@ -14,7 +14,7 @@ export const blogs = [
             "Provide emotional support and companionship.",
             "Always maintain safety at home environment."
         ],
-        image: "/doctors.jpg",
+        image: "/iStock-1447873986.jpg",
     },
     {
         id: 2,
@@ -30,7 +30,7 @@ export const blogs = [
             "They reduce hospital visits and improve comfort.",
             "Families feel relaxed knowing patients are safe."
         ],
-        image: "/doctors.jpg",
+        image: "/iStock-1447873986.jpg",
     },
     {
         id: 3,
@@ -46,7 +46,7 @@ export const blogs = [
             "Morning walk and balanced diet are important.",
             "Social interaction improves mental health."
         ],
-        image: "/doctors.jpg",
+        image: "/iStock-1447873986.jpg",
     },
     {
         id: 4,
@@ -62,7 +62,7 @@ export const blogs = [
             "Morning walk and balanced diet are important.",
             "Social interaction improves mental health."
         ],
-        image: "/doctors.jpg",
+        image: "/iStock-1447873986.jpg",
     },
     {
         id: 5,
@@ -78,6 +78,230 @@ export const blogs = [
             "They reduce hospital visits and improve comfort.",
             "Families feel relaxed knowing patients are safe."
         ],
-        image: "/doctors.jpg",
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 6,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 7,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 8,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 9,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 10,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 11,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 12,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 13,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 14,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 15,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 16,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 17,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 18,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
+    },
+    {
+        id: 19,
+        title: "Benefits of Home Nursing Services",
+        description: "Why home nursing is helpful for families.",
+        readTime: "4 min read",
+        date: "April 14, 2026",
+        author: "Team Feathers ",
+        authorImage: "/Testimonials_Img/deepak_founder.jpg",
+        tags: ["HEALTHCARE"],
+        content: [
+            "Home nursing services provide medical care at home.",
+            "They reduce hospital visits and improve comfort.",
+            "Families feel relaxed knowing patients are safe."
+        ],
+        image: "/iStock-1447873986.jpg",
     },
 ];

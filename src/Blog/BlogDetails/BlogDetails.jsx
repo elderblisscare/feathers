@@ -16,15 +16,39 @@ export default function BlogDetails() {
             <Navbar />
             <div className="pt-20">
                 <div className="pt-20 p-6 max-w-3xl mx-auto min-h-screen">
+
+                    <div className="flex flex-col items-center mt-4 mb-10">
+                        <img
+                            src={blog.authorImage}
+                            alt="author"
+                            className="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow"
+                        />
+
+                        <p className="mt-2 text-sm font-semibold text-gray-800">
+                            {blog.author}
+                        </p>
+
+                        <p className="text-xs text-gray-500">
+                            Author
+                        </p>
+                        <p className="text-xs text-gray-500 mt-2">{blog.date} • {blog.readTime}</p>
+                    </div>
+
+                    <h1 className="text-4xl font-bold mt-6 text-center">{blog.title}</h1>
+
+                    {/* Description */}
+                    <p className="text-gray-600 mt-2 mb-6 text-center">
+                        {blog.description}
+                    </p>
+
                     <img
                         src={blog.image}
                         alt={blog.title}
-                        className="w-full h-64 object-cover rounded-xl"
+                        className="w-full h-100 object-cover rounded-xl"
                     />
 
-                    <h1 className="text-4xl font-bold mt-6">{blog.title}</h1>
 
-                    <p className="text-gray-500 mt-2">{blog.date} • {blog.readTime}</p>
+
 
                     <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
                         {blog.content.map((para, index) => (

@@ -23,6 +23,7 @@ const Footer = () => {
               {/* <li><Link to="/membership" className="hover:text-[#8aa6c9] transition-colors">Membership</Link></li> */}
               {/* <li><Link to="/media" className="hover:text-[#8aa6c9] transition-colors">Media</Link></li> */}
               <li><Link to="/#testimonials" className="hover:text-[#8aa6c9] transition-colors">User stories</Link></li>
+              <li><Link to="/our-services" className="hover:text-[#8aa6c9] transition-colors">Health Services</Link></li>
               <li><Link to="/blogs" className="hover:text-[#8aa6c9] transition-colors">Blogs</Link></li>
               <li><Link to="/franchise-partnership" className="hover:text-[#8aa6c9] transition-colors">Franchise Partnership</Link></li>
             </ul>
@@ -76,7 +77,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           {/* Copyright and feedback */}
           <div className="text-sm flex flex-col md:flex-row gap-4 md:gap-8">
-            <p className="text-white/70">&copy; 2023 Feathers.com</p>
+            <p className="text-white/70">Copyright &copy; 2026 Feathers.com</p>
             <p>
               For feedback email: <a href="mailto:feedback@feathers.com" className="text-[#8aa6c9] hover:underline">feedback@feathers.com</a>
             </p>

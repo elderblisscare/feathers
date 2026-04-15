@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { blogs } from "../Data/BlogData";
 import Navbar from "../../components/Navbar";
 import Contact from "../../components/Contact";
@@ -9,6 +9,9 @@ export default function BlogList() {
 
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedTag, setSelectedTag] = useState("ALL");
+
+    const { tag } = useParams();
+    const navigate = useNavigate();
 
     const tags = [
         "ALL",
@@ -31,6 +34,15 @@ export default function BlogList() {
 
     const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
+    useEffect(() => {
+        if (tag) {
+            setSelectedTag(tag.toUpperCase());
+            setCurrentPage(1);
+        } else {
+            setSelectedTag("ALL");
+        }
+    }, [tag]);
+
     return (
         <>
             <Navbar />
@@ -41,7 +53,7 @@ export default function BlogList() {
                     </h1>
 
 
-            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-6 md:mt-8 mb-8 md:mb-10 rounded-2xl border border-blue-400 bg-gradient-to-br from-blue-100 to-white p-2 sm:p-3 md:p-4">
+                    <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-6 md:mt-8 mb-8 md:mb-10 rounded-2xl border border-blue-400 bg-gradient-to-br from-blue-100 to-white p-2 sm:p-3 md:p-4">
 
                         {tags.map((tag) => (
                             <button
@@ -49,13 +61,19 @@ export default function BlogList() {
                                 onClick={() => {
                                     setSelectedTag(tag);
                                     setCurrentPage(1);
+
+                                    if (tag === "ALL") {
+                                        navigate("/blogs");
+                                    } else {
+                                        navigate(`/blogs/category/${tag.toLowerCase()}`);
+                                    }
                                 }}
-                                className={`px-4 py-2 text-sm rounded-full border transition-all duration-300 transform hover:scale-105 ${selectedTag === tag
+                                className={`px-4 py-2 capitalize text-sm rounded-full border transition-all duration-300 transform hover:scale-105 ${selectedTag === tag
                                     ? "bg-blue-600 text-white scale-105 shadow-lg"
                                     : "bg-blue-900 text-white hover:bg-blue-950"
                                     }`}
                             >
-                                {tag}
+                                {tag.toLowerCase()}
                             </button>
                         ))}
 
@@ -65,7 +83,7 @@ export default function BlogList() {
                         {currentBlogs.map((blog) => (
                             <div
                                 key={blog.id}
-                                className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+                                className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition "
                             >
                                 {/* Image Section */}
                                 <div className="relative">
@@ -80,6 +98,11 @@ export default function BlogList() {
                                         {blog.tags?.map((tag, i) => (
                                             <span
                                                 key={i}
+                                                onClick={() => {
+                                                    setSelectedTag(tag);
+                                                    setCurrentPage(1);
+                                                    navigate(`/blogs/category/${tag.toLowerCase()}`);
+                                                }}
                                                 className="bg-black/60 text-white hover:bg-black/80  hover:text-blue-200 text-xs px-2 py-1 rounded-full cursor-pointer"
                                             >
                                                 {tag}
@@ -136,8 +159,8 @@ export default function BlogList() {
                             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                             disabled={currentPage === 1}
                             className={`px-4 py-2 rounded font-medium transition ${currentPage === 1
-                                ? "bg-gray-300 cursor-not-allowed"
-                                : "bg-blue-600 text-white hover:bg-blue-500"
+                                ? "bg-gray-300 cursor-not-allowed border-2 border-blue-400"
+                                : "bg-blue-600 text-white hover:bg-blue-500  border-2 border-black"
                                 }`}
                         >
                             ← Prev
@@ -149,8 +172,8 @@ export default function BlogList() {
                                 key={i}
                                 onClick={() => setCurrentPage(i + 1)}
                                 className={`px-4 py-2 rounded  ${currentPage === i + 1
-                                    ? "bg-blue-600 text-white"
-                                    : "bg-white border"
+                                    ? "bg-blue-600 text-white border-2 border-black"
+                                    : "bg-white border-2 border-blue-400 hover:border-black"
                                     }`}
                             >
                                 {i + 1}
@@ -166,8 +189,8 @@ export default function BlogList() {
                             }
                             disabled={currentPage === Math.ceil(filteredBlogs.length / blogsPerPage)}
                             className={`px-4 py-2 rounded font-medium transition  ${currentPage === Math.ceil(filteredBlogs.length / blogsPerPage)
-                                ? "bg-gray-300 cursor-not-allowed"
-                                : "bg-blue-600 text-white hover:bg-blue-500"
+                                ? "bg-gray-300 cursor-not-allowed  border-2 border-blue-400"
+                                : "bg-blue-600 text-white hover:bg-blue-500  border-2 border-black"
                                 }`}
                         >
                             Next →

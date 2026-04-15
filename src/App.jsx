@@ -63,6 +63,7 @@ const App = () => {
           <Route path="/inquiry" element={<InquirePage />} />
           <Route path="/our-services" element={<AllServicesPage />} />
           <Route path="/blogs" element={<BlogList />} />
+          <Route path="/blogs/category/:tag" element={<BlogList />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/terms-and-policies" element={<Term_And_Policy_Page />} />
           <Route path="*" element={<NotFoundPage />} />

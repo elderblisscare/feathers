@@ -32,6 +32,9 @@ export default function BlogDetails() {
                             Author
                         </p>
                         <p className="text-xs text-gray-500 mt-2">{blog.date} • {blog.readTime}</p>
+                        <p className="text-xs capitalize text-gray-500 mt-2">
+                            <span className="font-bold">Category:</span> {blog.tags?.map(tag => tag.toLowerCase()).join(", ")}
+                        </p>
                     </div>
 
                     <h1 className="text-4xl font-bold mt-6 text-center">{blog.title}</h1>

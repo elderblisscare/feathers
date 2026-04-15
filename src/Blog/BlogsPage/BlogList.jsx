@@ -40,52 +40,6 @@ export default function BlogList() {
                         Latest Blogs
                     </h1>
 
-                    {/* <div className="flex justify-center items-center gap-4 mt-8 mb-10 rounded-full border border-blue-400 bg-gradient-to-br from-blue-100 to-white">
-
-                        <button
-                            onClick={() => {
-                                setSelectedTag("ALL");
-                                setCurrentPage(1);
-                            }}
-                            className={`p-4 m-2 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "ALL"
-                                ? "bg-blue-600 text-white scale-105 shadow-lg"
-                                : "bg-blue-900 text-white hover:bg-blue-950"
-                                }`}
-                        >
-                            ALL
-                        </button>
-                        <button
-                            onClick={() => {
-                                setSelectedTag("HEALTHCARE");
-                                setCurrentPage(1);
-                            }}
-                            className={`p-4 m-2 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "HEALTHCARE"
-                                ? "bg-blue-600 text-white scale-105 shadow-lg"
-                                : "bg-blue-900 text-white hover:bg-blue-950"
-                                }`}
-                        >
-                            HEALTHCARE
-                        </button>
-                        <button
-                            onClick={() => {
-                                setSelectedTag("BUSINESS");
-                                setCurrentPage(1);
-                            }}
-                            className={`p-4 m-2 font-semibold rounded-full border transition-all duration-400 ease-in-out transform hover:scale-105 ${selectedTag === "BUSINESS"
-                                ? "bg-blue-600 text-white scale-105 shadow-lg"
-                                : "bg-blue-900 text-white hover:bg-blue-950"
-                                }`}
-                        >
-                            BUSINESS
-                        </button>
-                        <button>Ambulance</button>
-                        <button>Convenience</button>
-                        <button>Emergency</button>
-                        <button>Home Care Attendant</button>
-                        <button>Lifestyle</button>
-                        <button>Nurse</button>
-                        <button>Physiotherapy</button>
-                    </div> */}
 
             <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-6 md:mt-8 mb-8 md:mb-10 rounded-2xl border border-blue-400 bg-gradient-to-br from-blue-100 to-white p-2 sm:p-3 md:p-4">
 
@@ -96,7 +50,7 @@ export default function BlogList() {
                                     setSelectedTag(tag);
                                     setCurrentPage(1);
                                 }}
-                                className={`px-4 py-2 font-semibold rounded-full border transition-all duration-300 transform hover:scale-105 ${selectedTag === tag
+                                className={`px-4 py-2 text-sm rounded-full border transition-all duration-300 transform hover:scale-105 ${selectedTag === tag
                                     ? "bg-blue-600 text-white scale-105 shadow-lg"
                                     : "bg-blue-900 text-white hover:bg-blue-950"
                                     }`}

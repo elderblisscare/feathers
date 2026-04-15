@@ -24,9 +24,10 @@ export default function BlogDetails() {
                             className="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow"
                         />
 
-                        <p className="mt-2 text-sm font-semibold text-gray-800">
+                       <Link to="/"> <p className="mt-2 text-sm font-semibold text-gray-800 hover:text-blue-400">
                             {blog.author}
                         </p>
+                        </Link>
 
                         <p className="text-xs text-gray-500">
                             Author
@@ -47,7 +48,7 @@ export default function BlogDetails() {
                     <img
                         src={blog.image}
                         alt={blog.title}
-                        className="w-full h-100 object-cover rounded-xl"
+                        className=" object-cover rounded-xl"
                     />
 
                     <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">

@@ -48,7 +48,7 @@ export default function BlogDetails() {
                     <img
                         src={blog.image}
                         alt={blog.title}
-                        className=" object-cover rounded-xl"
+                        className="w-full h-100 object-cover rounded-xl"
                     />
 
                     <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">

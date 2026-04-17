@@ -27,12 +27,12 @@ const PoliciesPage = () => {
       </p>
 
       {/* Tabs */}
-      <div className="grid grid-cols-2 md:grid-cols-4 border">
+      <div className="grid grid-cols-2 md:grid-cols-4  border-2">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`py-3 text-sm md:text-base font-medium border-r last:border-r-0 
+            className={`py-3 text-sm md:text-base font-medium border-2 border-black
               ${
                 activeTab === tab.id
                   ? "bg-blue-900 text-white"

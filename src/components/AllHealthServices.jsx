@@ -295,25 +295,23 @@ const AllHealthServices = () => {
                   key={i}
                   className="bg-gradient-to-br from-blue-100 to-white border border-blue-300 rounded-2xl shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 overflow-hidden"
                 >
-                  <div className="relative w-full h-[250px] overflow-hidden rounded-t-xl">
 
-                    {/* Background Image (fills space)
+                  <div className="relative w-full h-[250px] overflow-hidden rounded-t-xl">
+                    {/* Background Blur */}
                     <img
                       src={item.image}
                       alt=""
-                      className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
-                    /> */}
-
-                    {/* Main Image (no crop) */}
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="relative w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-70"
                     />
 
-
-
-
+                    {/* Main Image */}
+                    <div className="relative w-full h-[250px] flex items-center justify-center">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-[220px] w-[300px] rounded-md shadow-lg"
+                      />
+                    </div>
                   </div>
 
                   <div className="p-4">

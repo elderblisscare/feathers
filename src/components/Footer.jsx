@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom';
 import { navLinks, contactInfo } from '../../constants';
 
 const Footer = () => {
-  // const scrollToTop = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
 
   return (
     <footer className="bg-[#012d61] text-white">
@@ -20,8 +14,6 @@ const Footer = () => {
             <h3 className="text-xl font-cormorant font-semibold mb-6">FEATHERS</h3>
             <ul className="space-y-3">
               <li><Link to="/about" className="hover:text-[#8aa6c9] transition-colors">About Feathers</Link></li>
-              {/* <li><Link to="/membership" className="hover:text-[#8aa6c9] transition-colors">Membership</Link></li> */}
-              {/* <li><Link to="/media" className="hover:text-[#8aa6c9] transition-colors">Media</Link></li> */}
               <li><Link to="/#testimonials" className="hover:text-[#8aa6c9] transition-colors">User stories</Link></li>
               <li><Link to="/our-services" className="hover:text-[#8aa6c9] transition-colors">Health Services</Link></li>
               <li><Link to="/blogs" className="hover:text-[#8aa6c9] transition-colors">Blogs</Link></li>
@@ -121,17 +113,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Back to top button
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full shadow-lg transition-colors z-10"
-        aria-label="Back to top"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-      </button> */}
     </footer>
   );
 };

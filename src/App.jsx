@@ -9,12 +9,12 @@ import MedicalEquipmentPage from "./pages/MedicalEquipmentPage";
 import HomecareServicesPage from "./pages/HomecareServicesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutUsPage from "./pages/AboutUsPage";
-import ScrollToTop from "./components/ScrollToTop";
 import InquirePage from "./pages/InquirePage";
 import AllServicesPage from "./pages/AllServicesPage";
 import Term_And_Policy_Page from "./pages/Term_And_Policy_Page";
 import BlogList from "./Blog/BlogsPage/BlogList";
 import BlogDetails from "./Blog/BlogDetails/BlogDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
 
@@ -52,7 +52,6 @@ const App = () => {
 
   return (
     <Router>
-      <ScrollToTop />
       <main className="bg-[#f5f5f5]">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -68,6 +67,8 @@ const App = () => {
           <Route path="/terms-and-policies" element={<Term_And_Policy_Page />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+          {/* Back to top button */}
+          <ScrollToTop />
       </main>
     </Router>
   )

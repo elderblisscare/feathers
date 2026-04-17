@@ -5,6 +5,9 @@ import App from './App.jsx'
 import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 gsap.registerPlugin(ScrollTrigger)
 

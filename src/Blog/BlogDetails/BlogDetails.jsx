@@ -21,7 +21,7 @@ export default function BlogDetails() {
         relatedBlogs = blogs.filter((b) => b.id !== blog.id);
     }
 
-    relatedBlogs = relatedBlogs.slice(0, 2);
+    relatedBlogs = relatedBlogs.slice(0, 3);
 
     console.log(relatedBlogs);
 
@@ -124,38 +124,40 @@ export default function BlogDetails() {
                         </button></Link>
                     </div>
 
-                    {/* Related Posts */}
-                    <div className="max-w-6xl mx-auto px-6 mt-16">
-                        <h2 className="text-3xl font-bold mb-8">Related Posts</h2>
+                </div>
 
-                        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
-                            {relatedBlogs.map((item) => (
-                                <div
-                                    key={item.id}
-                                    className="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition-all duration-300"
-                                >
-                                    {/* Image */}
-                                    <div className="relative w-full h-[200px] overflow-hidden">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
 
-                                    {/* Content */}
-                                    <div className="p-4">
-                                        <Link to={`/blog/${item.id}`}>
-                                            <h3 className="font-semibold text-lg hover:text-blue-500">
-                                                {item.title}
-                                            </h3>
-                                        </Link>
+                {/* Related Posts */}
+                <div className="max-w-6xl mx-auto px-6 mt-16 mb-16">
+                    <h2 className="text-3xl font-bold mb-8">Related Posts</h2>
 
-                                        <p className="text-sm text-gray-500 mt-2">{item.date}</p>
-                                    </div>
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+                        {relatedBlogs.map((item) => (
+                            <div
+                                key={item.id}
+                                className="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition-all duration-300"
+                            >
+                                {/* Image */}
+                                <div className="relative w-full h-[200px] overflow-hidden">
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
-                            ))}
-                        </div>
+
+                                {/* Content */}
+                                <div className="p-4">
+                                    <Link to={`/blog/${item.id}`}>
+                                        <h3 className="font-semibold text-lg hover:text-blue-500">
+                                            {item.title}
+                                        </h3>
+                                    </Link>
+
+                                    <p className="text-sm text-gray-500 mt-2">{item.date}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <Contact />

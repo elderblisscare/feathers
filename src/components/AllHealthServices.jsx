@@ -275,7 +275,7 @@ const AllHealthServices = () => {
             key={index}
             className="mb-16 bg-blue-100 p-6 md:p-10 rounded-2xl shadow-sm"
           >
-            <h2 className="text-6xl font-serif  mb-6 text-center">
+            <h2 className="text-3xl md:text-6xl font-serif  mb-6 text-center">
               {section.category}
             </h2>
 

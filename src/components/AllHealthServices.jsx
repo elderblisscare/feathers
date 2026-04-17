@@ -99,87 +99,87 @@ const servicesData = [
     items: [
       {
         title: "Monitor",
-        image: "/ServicesImg/ME1.jpg",
+        image: "/ServicesImg/med1.png",
         description: "Tracks vital signs like heart rate, BP, and oxygen levels.",
       },
       {
         title: "Urine Catheter",
-        image: "/ServicesImg/ME2.webp",
+        image: "/ServicesImg/med2.png",
         description: "Helps in urine drainage for patients unable to urinate naturally..",
       },
       {
         title: "ECG Electrodes",
-        image: "/ServicesImg/ME3.jpg",
+        image: "/ServicesImg/med3.png",
         description: "Used for heart monitoring.",
       },
       {
         title: "Crash Cart",
-        image: "/ServicesImg/ME4.jpg",
+        image: "/ServicesImg/med4.png",
         description: "Emergency life-saving equipment trolley.",
       },
       {
         title: "Ventilator",
-        image: "/ServicesImg/ME5.webp",
+        image: "/ServicesImg/med5.png",
         description: "Supports breathing in critical care.",
       },
       {
         title: "NG Tube",
-        image: "/ServicesImg/ME6.jpg",
+        image: "/ServicesImg/md6.png",
         description: "Used for feeding or medication.",
       },
       {
         title: "Digital Thermometer",
-        image: "/ServicesImg/ME7.jpg",
+        image: "/ServicesImg/md7.png",
         description: "Measures body temperature.",
       },
       {
         title: "Ambu Bag",
-        image: "/ServicesImg/ME8.jpg",
+        image: "/ServicesImg/md8.png",
         description: "Manual breathing support device.",
       },
       {
         title: "Pulse Oximeter",
-        image: "/ServicesImg/ME9.jpg",
+        image: "/ServicesImg/md9.png",
         description: "Measures oxygen levels.",
       },
       {
         title: "Stretcher",
-        image: "/ServicesImg/ME10.jpg",
+        image: "/ServicesImg/md10.png",
         description: "Patient transport equipment.",
       },
       {
         title: "Oxygen Cylinder",
-        image: "/ServicesImg/ME11.jpg",
+        image: "/ServicesImg/md11.png",
         description: "Provides oxygen supply.",
       },
       {
         title: "Gun Thermometer",
-        image: "/ServicesImg/ME12.jpg",
+        image: "/ServicesImg/md13.png",
         description: "Contactless temperature device.",
       },
       {
         title: "Glucometer",
-        image: "/ServicesImg/ME13.jpg",
+        image: "/ServicesImg/md12.png",
         description: "Measures blood sugar levels.",
       },
       {
         title: "Hearing Aids",
-        image: "/ServicesImg/ME14.jpg",
+        image: "/ServicesImg/md14.png",
         description: "Improves hearing ability.",
       },
       {
         title: "BP Machine",
-        image: "/ServicesImg/ME15.jpg",
+        image: "/ServicesImg/md15.png",
         description: "Measures blood pressure.",
       },
       {
         title: "BiPAP",
-        image: "/ServicesImg/ME16.jpg",
+        image: "/ServicesImg/md17.png",
         description: "Breathing support device.",
       },
       {
         title: "CPAP",
-        image: "/ServicesImg/ME17.png",
+        image: "/ServicesImg/md16.png",
         description: "Airway pressure support device.",
       },
     ],
@@ -295,11 +295,26 @@ const AllHealthServices = () => {
                   key={i}
                   className="bg-gradient-to-br from-blue-100 to-white border border-blue-300 rounded-2xl shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 overflow-hidden"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-48 object-cover border-b border-gray-200"
-                  />
+                  <div className="relative w-full h-[250px] overflow-hidden rounded-t-xl">
+
+                    {/* Background Image (fills space)
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
+                    /> */}
+
+                    {/* Main Image (no crop) */}
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="relative w-full h-full object-cover"
+                    />
+
+
+
+
+                  </div>
 
                   <div className="p-4">
                     <h3 className="text-xl font-semibold mb-2">

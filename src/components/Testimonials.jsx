@@ -44,9 +44,7 @@ export default function Testimonials() {
         modules={[Autoplay, Pagination]}
         spaceBetween={20}
         slidesPerView={1}
-        loop={true} // 🔥 MOST IMPORTANT
-        loopFillGroupWithBlank={true}
-        loopAdditionalSlides={testimonials.length}
+        loop={testimonials.length > 3} // 🔥 FIX
         autoplay={{
           delay: 3000,
           disableOnInteraction: false, // user click ke baad bhi chale
@@ -55,6 +53,7 @@ export default function Testimonials() {
         speed={800} // smooth transition
         pagination={{ clickable: true }}
         breakpoints={{
+          640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}

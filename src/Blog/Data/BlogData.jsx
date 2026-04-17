@@ -1079,16 +1079,3 @@ export const blogs = [
         ]
     }
 ];
-
-
-//  {
-//                 type: "imageGrid",
-//                 images: [
-// "/iStock-1447873986.jpg",
-// "/iStock-1447873986.jpg",
-// "/iStock-1447873986.jpg",
-// "/iStock-1447873986.jpg",
-// "/iStock-1447873986.jpg",
-// "/iStock-1447873986.jpg"
-//                 ]
-//             }

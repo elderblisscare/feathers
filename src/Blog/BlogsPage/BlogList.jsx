@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { blogs } from "../Data/BlogData";
 import Navbar from "../../components/Navbar";
-import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 
 export default function BlogList() {
@@ -197,7 +196,6 @@ export default function BlogList() {
                         </button>
                     </div>
                 </div>
-                <Contact />
                 <Footer />
             </div>
         </>

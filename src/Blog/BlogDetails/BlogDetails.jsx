@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { blogs } from "../Data/BlogData";
 import Navbar from "../../components/Navbar";
-import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 
 export default function BlogDetails() {
@@ -160,7 +159,6 @@ export default function BlogDetails() {
                         ))}
                     </div>
                 </div>
-                <Contact />
                 <Footer />
             </div>
         </>

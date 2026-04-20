@@ -297,12 +297,12 @@ const AllHealthServices = () => {
                 >
 
                   <div className="relative w-full h-[250px] overflow-hidden rounded-t-xl">
-                    {/* Background Blur */}
+                    {/* Background Blur
                     <img
                       src={item.image}
                       alt=""
                       className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-70"
-                    />
+                    /> */}
 
                     {/* Main Image */}
                     <div className="relative w-full h-[250px] flex items-center justify-center">

@@ -11,7 +11,7 @@ const servicesData = [
     items: [
       {
         title: "Ambulance Services",
-        image: "/ServicesImg/AHS1.jpg",
+        image: "/ServicesImg/ambulance.jpg",
         features: [
           "24/7 emergency response",
           "Fully equipped ambulance",
@@ -22,7 +22,7 @@ const servicesData = [
       },
       {
         title: "Doctor On Call",
-        image: "/ServicesImg/AHS2.jpg",
+        image: "/ServicesImg/doctorOnCall.jpg",
         features: [
           "Instant consultation",
           "Home visits",
@@ -44,7 +44,7 @@ const servicesData = [
       },
       {
         title: "Health Monitoring",
-        image: "/ServicesImg/AHS4.avif",
+        image: "/ServicesImg/heslthMonitor2.jpg",
         features: [
           "Vital checks",
           "Remote monitoring",
@@ -55,7 +55,7 @@ const servicesData = [
       },
       {
         title: "Labs & Diagnostics",
-        image: "/ServicesImg/AHS5.webp",
+        image: "/ServicesImg/labs.jpg",
         features: [
           "Home sample collection",
           "Accurate reports",
@@ -194,7 +194,7 @@ const servicesData = [
     items: [
       {
         title: "Doctor Home Visit",
-        image: "/ServicesImg/HM1.jpg",
+        image: "/ServicesImg/doctorVisit.jpg",
         features: [
           " In-home consultation",
           "Diagnosis & treatment ",
@@ -214,7 +214,7 @@ const servicesData = [
       },
       {
         title: "Professional Attendants",
-        image: "/ServicesImg/HM3.webp",
+        image: "/ServicesImg/AHS6.jpg",
         features: [
           " Daily care assistance",
           " Hygiene support",
@@ -234,7 +234,7 @@ const servicesData = [
       },
       {
         title: "Medicine & Food Delivery",
-        image: "/ServicesImg/Hm5.jpg",
+        image: "/ServicesImg/medicineDelivery.jpg",
         features: [
           " Timely delivery",
           " Prescription management",
@@ -244,7 +244,7 @@ const servicesData = [
       },
       {
         title: "Home Healthcare",
-        image: "/ServicesImg/HM6.webp",
+        image: "/ServicesImg/AHS7.jpg",
         features: [
           " Comprehensive care",
           " Chronic illness support",

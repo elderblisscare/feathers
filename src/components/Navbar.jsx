@@ -60,15 +60,16 @@ const Navbar = () => {
 
           {/* 🔹 LEFT: LOGO */}
           <div className="flex justify-start h-16 ">
-            <Link to="/">
-              {/* <h1 className="text-3xl font-semibold tracking-wider text-[#1C4571] hover:opacity-80 transition">
-                Feathers
-              </h1> */}
+            <Link to="/" className="flex items-center">
               <img
-                src="/Logo/f.png"   // better use absolute path
+                src="/Logo/f3.png"   // better use absolute path
                 alt="Feathers Logo"
-                className="h-16 w-auto object-contain"
+                className=" h-16 w-auto object-contain"
               />
+              <h1 className="text-3xl font-bold tracking-wider text-[#102f4f] hover:opacity-80 transition">
+                Feathers
+              </h1>
+
             </Link>
           </div>
 

@@ -136,7 +136,7 @@ const Locations = () => {
           <LocationCard
             title="Home Healthcare"
             subtitle="HealthCare at Your Doorstep"
-            image="homeHealthCare.avif"
+            image="./ServicesImg/homeHealthCare.avif"
             addToRefs={addToRefs}
           />
         </div>
@@ -161,7 +161,7 @@ const Locations = () => {
           <LocationCard
             title="Lifestyle Support"
             subtitle="Wellness & Preventive Care"
-            image="health_lifestyle.jpg"
+            image="./ServicesImg/health_lifestyle.jpg"
             addToRefs={addToRefs}
           />
 

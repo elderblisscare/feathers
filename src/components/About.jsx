@@ -112,7 +112,7 @@ const About = () => {
       {/* 🔸 Section 1 (Text Left, Image Right) */}
       <AboutBlock
         reverse={false}
-        image="doctors.jpg"
+        image="aboutImg1.jpg"
         title="Compassionate Care Starts at Home"
         subtitle="Trusted Healthcare for Every Stage of Life"
         text1="At Feathers, we provide personalized healthcare services for seniors, adults, and children — ensuring comfort, safety, and expert medical support at home."
@@ -122,7 +122,7 @@ const About = () => {
       {/* 🔸 Section 2 (Image Left, Text Right) */}
       <AboutBlock
         reverse={true}
-        image="about-img2.jpg"
+        image="aboutImg2.jpg"
         title="Quality Care You Can Trust"
         subtitle="Dedicated to Your Health & Wellbeing"
         text1="We bring professional medical care directly to your home with a focus on comfort, dignity, and personalized attention."

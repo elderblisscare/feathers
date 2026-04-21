@@ -204,7 +204,7 @@ const servicesData = [
       },
       {
         title: "Physio Home Visit",
-        image: "/ServicesImg/HM2.png",
+        image: "/ServicesImg/physio.jpg",
         features: [
           "Personalized therapy ",
           " Injury recovery",

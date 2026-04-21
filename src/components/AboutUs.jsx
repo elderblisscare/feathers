@@ -78,10 +78,10 @@ const AboutBlock = ({ reverse, image, title, subtitle, text1, text2 }) => {
                             {text2}
                         </p>
 
-                       <Link to="/our-services"><button className="border border-blue-600 text-blue-600 px-5 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
+                        <Link to="/our-services"><button className="border border-blue-600 text-blue-600 px-5 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
                             Explore Our Services
                         </button>
-                        </Link> 
+                        </Link>
                     </div>
 
                     {/* 🔹 IMAGE */}
@@ -110,7 +110,7 @@ const WhyChoose = () => {
         <section className="py-16 md:py-24 px-4 bg-gray-50">
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
 
-                                {/* 🔹 TEXT (RIGHT) */}
+                {/* 🔹 TEXT (RIGHT) */}
                 <div className="space-y-6">
 
                     <h2 className="text-3xl md:text-4xl font-serif text-gray-900 leading-tight">
@@ -157,10 +157,10 @@ const WhyChoose = () => {
                     </div>
 
                     {/* 🔹 BUTTON */}
-                 <Link to="/inquiry"> <button className="mt-4 border border-blue-600 text-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <Link to="/inquiry"> <button className="mt-4 border border-blue-600 text-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
                         Contact Us
                     </button>
-                    </Link>  
+                    </Link>
 
                 </div>
 
@@ -197,44 +197,44 @@ const FounderSection = () => {
                 </div>
 
                 {/* BOX 1 */}
-<div className="bg-[#e9f0f8] p-6 md:p-8 rounded-xl mb-10 grid md:grid-cols-3 items-center gap-6 shadow-md hover:shadow-lg transition">
+                <div className="bg-[#e9f0f8] p-6 md:p-8 rounded-xl mb-10 grid md:grid-cols-3 items-center gap-6 shadow-md hover:shadow-lg transition">
 
-  {/* 🔹 TEXT (2 parts) */}
-  <div className="md:col-span-2">
-    <p className="text-gray-700 font-display leading-relaxed">
-      I started Feathers Healthcare after personally experiencing the challenges
-      of caring for aging family members at home.
-    </p>
+                    {/* 🔹 TEXT (2 parts) */}
+                    <div className="md:col-span-2">
+                        <p className="text-gray-700 font-display leading-relaxed">
+                            I started Feathers Healthcare after personally experiencing the challenges
+                            of caring for aging family members at home.
+                        </p>
 
-    <p className="text-gray-700 font-display leading-relaxed mt-3">
-      With years of experience across professional environments and a deep
-      understanding of service quality and care standards, I witnessed firsthand
-      how fragmented and impersonal senior care services can often be.
-    </p>
+                        <p className="text-gray-700 font-display leading-relaxed mt-3">
+                            With years of experience across professional environments and a deep
+                            understanding of service quality and care standards, I witnessed firsthand
+                            how fragmented and impersonal senior care services can often be.
+                        </p>
 
-    <p className="text-gray-700 font-display leading-relaxed mt-3">
-      Feathers Healthcare was created to bridge that gap—by delivering reliable,
-      compassionate, and personalized care that allows elders to age with dignity,
-      comfort, and trust in their own homes.
-    </p>
+                        <p className="text-gray-700 font-display leading-relaxed mt-3">
+                            Feathers Healthcare was created to bridge that gap—by delivering reliable,
+                            compassionate, and personalized care that allows elders to age with dignity,
+                            comfort, and trust in their own homes.
+                        </p>
 
-    <p className="text-gray-700 font-display leading-relaxed mt-3">
-      For me, this isn’t just business—it’s deeply personal.
-    </p>
+                        <p className="text-gray-700 font-display leading-relaxed mt-3">
+                            For me, this isn’t just business—it’s deeply personal.
+                        </p>
 
-    <p className="mt-4 font-semibold">Deepak Saraswat</p>
-    <p className="text-sm text-gray-600">Founder, Feathers</p>
-  </div>
+                        <p className="mt-4 font-semibold">Deepak Saraswat</p>
+                        <p className="text-sm text-gray-600">Founder, Feathers</p>
+                    </div>
 
-  {/* 🔹 IMAGE (1 part) */}
-  <div className="md:col-span-1 flex justify-center ">
-    <img
-      src="/Testimonials_Img/deepak_founder.jpg"
-      className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover"
-    />
-  </div>
+                    {/* 🔹 IMAGE (1 part) */}
+                    <div className="md:col-span-1 flex justify-center ">
+                        <img
+                            src="/Testimonials_Img/deepak_founder.jpg"
+                            className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover"
+                        />
+                    </div>
 
-</div>
+                </div>
 
                 {/* BOX 2 */}
                 {/* <div className="bg-[#f5e9e7] p-6 md:p-8 rounded-xl grid md:grid-cols-2 items-center gap-6">
@@ -353,17 +353,21 @@ const AboutUs = () => {
             {/* 🔸 Section 1 (Text Left, Image Right) */}
             <AboutBlock
                 reverse={false}
-                image="doctors.jpg"
+                image="aboutImg1.jpg"
                 title="Compassionate Care Starts at Home"
                 subtitle="Trusted Healthcare for Every Stage of Life"
                 text1="At Feathers, we provide personalized healthcare services for seniors, adults, and children — ensuring comfort, safety, and expert medical support at home."
                 text2="Our experienced doctors, nurses, and caregivers deliver reliable home healthcare services with compassion and professionalism."
+
+
+
+
             />
 
             {/* 🔸 Section 2 (Image Left, Text Right) */}
             <AboutBlock
                 reverse={true}
-                image="about-img2.jpg"
+                image="aboutImg2.jpg"
                 title="Quality Care You Can Trust"
                 subtitle="Dedicated to Your Health & Wellbeing"
                 text1="We bring professional medical care directly to your home with a focus on comfort, dignity, and personalized attention."

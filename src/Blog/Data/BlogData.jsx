@@ -156,12 +156,12 @@ export const blogs = [
             {
                 type: "imageGrid",
                 images: [
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg"
+                    "../BlogImg/b1.jpg",
+                    "../BlogImg/b10.jpg",
+                    "../BlogImg/b9.jpg",
+                    "../BlogImg/b6.jpg",
+                    "../BlogImg/b5.jpg",
+                    "../BlogImg/b4.jpg"
                 ]
             }
         ],
@@ -226,11 +226,11 @@ export const blogs = [
 
             {
                 type: "heading",
-                text: "How ElderBlissCare Makes Physiotherapy Affordable"
+                text: "How Feathers Makes Physiotherapy Affordable"
             },
             {
                 type: "paragraph",
-                text: "ElderBlissCare focuses on delivering high-quality physiotherapy services at affordable prices without compromising on care."
+                text: "Feathers focuses on delivering high-quality physiotherapy services at affordable prices without compromising on care."
             },
             {
                 type: "list",
@@ -271,7 +271,7 @@ export const blogs = [
             },
             {
                 type: "paragraph",
-                text: "In urgent situations, quick access to physiotherapy can make a big difference. ElderBlissCare also offers emergency services in Delhi to ensure patients receive timely care when they need it most."
+                text: "In urgent situations, quick access to physiotherapy can make a big difference. Feathers also offers emergency services in Delhi to ensure patients receive timely care when they need it most."
             },
 
             {
@@ -280,7 +280,7 @@ export const blogs = [
             },
             {
                 type: "paragraph",
-                text: "Affordable home physiotherapy is transforming the way people recover from injuries and manage pain. With expert care, personalized treatment, and the comfort of home, services like ElderBlissCare are making quality healthcare accessible to everyone in Delhi."
+                text: "Affordable home physiotherapy is transforming the way people recover from injuries and manage pain. With expert care, personalized treatment, and the comfort of home, services like Feathers are making quality healthcare accessible to everyone in Delhi."
             },
 
             {
@@ -290,12 +290,12 @@ export const blogs = [
             {
                 type: "imageGrid",
                 images: [
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg"
+                    "../BlogImg/b2.jpg",
+                    "../BlogImg/b8.jpg",
+                    "../BlogImg/b9.jpg",
+                    "../BlogImg/b7.jpg",
+                    "../BlogImg/b5.jpg",
+                    "../BlogImg/b3.jpg"
                 ]
             }
         ]
@@ -423,12 +423,12 @@ export const blogs = [
             {
                 type: "imageGrid",
                 images: [
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg"
+                    "../BlogImg/b7.jpg",
+                    "../BlogImg/b8.jpg",
+                    "../BlogImg/b9.jpg",
+                    "../BlogImg/b10.jpg",
+                    "../BlogImg/b1.jpg",
+                    "../BlogImg/b2.jpg"
                 ]
             }
         ]
@@ -543,12 +543,12 @@ export const blogs = [
             {
                 type: "imageGrid",
                 images: [
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg"
+                    "../BlogImg/b5.jpg",
+                    "../BlogImg/b6.jpg",
+                    "../BlogImg/b7.jpg",
+                    "../BlogImg/b8.jpg",
+                    "../BlogImg/b9.jpg",
+                    "../BlogImg/b10.jpg"
                 ]
             }
         ]
@@ -675,12 +675,12 @@ export const blogs = [
             {
                 type: "imageGrid",
                 images: [
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg",
-                    "/iStock-1447873986.jpg"
+                    "../BlogImg/b4.jpg",
+                    "../BlogImg/b2.jpg",
+                    "../BlogImg/b3.jpg",
+                    "../BlogImg/b1.jpg",
+                    "../BlogImg/b5.jpg",
+                    "../BlogImg/b6.jpg"
                 ]
             }
         ]

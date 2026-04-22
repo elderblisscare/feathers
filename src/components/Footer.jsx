@@ -10,20 +10,28 @@ const Footer = () => {
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About us section */}
-          <div>
-            <h3 className="text-xl font-cormorant font-semibold mb-6">FEATHERS</h3>
-            <ul className="space-y-3">
-              <li><Link to="/about" className="hover:text-[#8aa6c9] transition-colors">About Feathers</Link></li>
-              <li><Link to="/#testimonials" className="hover:text-[#8aa6c9] transition-colors">User stories</Link></li>
-              <li><Link to="/our-services" className="hover:text-[#8aa6c9] transition-colors">Health Services</Link></li>
-              <li><Link to="/blogs" className="hover:text-[#8aa6c9] transition-colors">Blogs</Link></li>
-              <li><Link to="/franchise-partnership" className="hover:text-[#8aa6c9] transition-colors">Franchise Partnership</Link></li>
-            </ul>
+          <div className="flex flex-col items-start">
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src="/Logo/f3.png"
+                alt="Feathers Logo"
+                className="h-16 w-auto object-contain"
+              />
+              <h1 className="text-3xl font-bold tracking-wider text-white ">
+                Feathers
+              </h1>
+            </Link>
+
+            <p className="mt-4 text-sm leading-relaxed text-gray-300">
+              At Feathers, we provide personalized healthcare services for seniors,
+              adults, and children — ensuring comfort, safety, and expert medical
+              support at home.
+            </p>
           </div>
           {/* Important Links */}
           <div className='flex flex-col md:items-center items-start'>
             <h3 className="text-xl font-cormorant  font-semibold mb-6">Important Links</h3>
-            <ul className="space-y-3 md:text-center text-left">
+            <ul className="space-y-3 md:text-center text-left mt-4 text-sm leading-relaxed text-gray-300">
               <li><Link to="/about" className="hover:text-[#8aa6c9] transition-colors">About Feathers</Link></li>
               {/* <li><Link to="/membership" className="hover:text-[#8aa6c9] transition-colors">Membership</Link></li> */}
               {/* <li><Link to="/media" className="hover:text-[#8aa6c9] transition-colors">Media</Link></li> */}
@@ -37,7 +45,7 @@ const Footer = () => {
           {/* Support section */}
           <div className='flex flex-col md:items-center items-start'>
             <h3 className="text-xl font-cormorant font-semibold mb-6">Support</h3>
-            <ul className="space-y-3 md:text-center text-left">
+            <ul className="space-y-3 md:text-center text-left mt-4 text-sm leading-relaxed text-gray-300">
               <li><Link to="/emergency-support" className="hover:text-[#8aa6c9] transition-colors">Emergency support</Link></li>
               <li><Link to="/services" className="hover:text-[#8aa6c9] transition-colors">VAS services</Link></li>
               <li><Link to="/inquiry" className="hover:text-[#8aa6c9] transition-colors">Contact us</Link></li>
@@ -47,7 +55,7 @@ const Footer = () => {
           {/* Terms & Policies section */}
           <div className='flex flex-col md:items-end items-start '>
             <h3 className="text-xl font-cormorant font-semibold mb-6">Terms & Policies</h3>
-            <ul className="space-y-3 md:text-right text-left">
+            <ul className="space-y-3 md:text-right text-left mt-4 text-sm leading-relaxed text-gray-300">
               <li><Link to="/terms-and-policies" className="hover:text-[#8aa6c9] transition-colors">Terms and condition</Link></li>
               <li><Link to="/terms-and-policies" className="hover:text-[#8aa6c9] transition-colors">Privacy policy</Link></li>
               <li><Link to="/terms-and-policies" className="hover:text-[#8aa6c9] transition-colors">Cookies policy</Link></li>

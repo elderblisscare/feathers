@@ -293,7 +293,7 @@ const AllHealthServices = () => {
               {section.items.map((item, i) => (
                 <div
                   key={i}
-                  className="bg-gradient-to-br from-blue-100 to-white border border-blue-300 rounded-2xl shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 overflow-hidden"
+                  className=" bg-white border-blue-300 border-2 rounded-2xl shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 overflow-hidden"
                 >
 
                   <div className="relative w-full h-[250px] overflow-hidden rounded-t-xl">
@@ -309,7 +309,7 @@ const AllHealthServices = () => {
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="h-[220px] w-[300px] rounded-md shadow-lg"
+                        className="h-[220px] w-[300px] rounded-md shadow-lg border-2 border-blue-300 "
                       />
                     </div>
                   </div>

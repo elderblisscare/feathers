@@ -167,16 +167,18 @@ export default function BlogList() {
 
                         {/* Page Indicator */}
                         {[...Array(Math.ceil(filteredBlogs.length / blogsPerPage))].map((_, i) => (
-                            <button
-                                key={i}
-                                onClick={() => setCurrentPage(i + 1)}
-                                className={`px-4 py-2 rounded  ${currentPage === i + 1
-                                    ? "bg-blue-600 text-white border-2 border-black"
-                                    : "bg-white border-2 border-blue-400 hover:border-black"
-                                    }`}
-                            >
-                                {i + 1}
-                            </button>
+                            <Link key={i} to={`/page/${i + 1}`}>
+                                <button
+                                    key={i}
+                                    onClick={() => setCurrentPage(i + 1)}
+                                    className={`px-4 py-2 rounded  ${currentPage === i + 1
+                                        ? "bg-blue-600 text-white border-2 border-black"
+                                        : "bg-white border-2 border-blue-400 hover:border-black"
+                                        }`}
+                                >
+                                    {i + 1}
+                                </button>
+                            </Link>
                         ))}
 
                         {/* Next Button */}

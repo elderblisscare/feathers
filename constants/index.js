@@ -11,7 +11,7 @@ const navLinks = [
 
 const contactInfo = {
   email: 'info@elderblisscare.com',
-  phone: '+91-9582038843'
+  phone: '+91-7982363899'
 };
 
 export { navLinks, contactInfo };

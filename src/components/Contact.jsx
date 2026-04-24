@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { contactInfo } from "../../constants";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -195,7 +196,7 @@ const Contact = () => {
                   </div>
                   <div className="pt-0.5">
                     <h4 className="font-cormorant text-lg font-medium text-white">Email</h4>
-                    <a href="mailto:contact@feathers.care" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">contact@feathers.care</a>
+                    <a href="mailto:feathers.agency29@gmail.com" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">feathers.agency29@gmail.com</a>
                   </div>
                 </div>
 
@@ -208,7 +209,7 @@ const Contact = () => {
                   </div>
                   <div className="pt-0.5">
                     <h4 className="font-cormorant text-lg font-medium text-white">Phone</h4>
-                    <a href="tel:+18005551234" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">(+91) 7982363899</a>
+                    <a   href="tel:+917982363899" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">+91 7982363899</a>
                   </div>
                 </div>
               </div>

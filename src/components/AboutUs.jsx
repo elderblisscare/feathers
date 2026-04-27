@@ -53,8 +53,10 @@ const AboutBlock = ({ reverse, image, title, subtitle, text1, text2 }) => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-16 md:py-20 px-4 overflow-hidden">
+
+        <section ref={sectionRef} className="py-8 md:py-4 px-4 overflow-hidden">
             <div className="max-w-6xl mx-auto">
+
                 <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
                     {/* 🔹 TEXT */}
@@ -62,11 +64,11 @@ const AboutBlock = ({ reverse, image, title, subtitle, text1, text2 }) => {
                         className={`text-content space-y-6 max-w-xl ${reverse ? "lg:order-2 lg:pl-8" : "lg:pr-8"
                             }`}
                     >
-                        <h1 className="font-serif text-3xl md:text-5xl text-gray-900 leading-tight">
+                        <h1 className="font-serif text-3xl md:text-5xl text-[#1C4571] leading-tight">
                             {title}
                         </h1>
 
-                        <h2 className="text-lg md:text-xl font-medium text-gray-800">
+                        <h2 className="text-lg md:text-xl font-medium text-[#1C4571]">
                             {subtitle}
                         </h2>
 
@@ -113,7 +115,7 @@ const WhyChoose = () => {
                 {/* 🔹 TEXT (RIGHT) */}
                 <div className="space-y-6">
 
-                    <h2 className="text-3xl md:text-4xl font-serif text-gray-900 leading-tight">
+                    <h2 className="text-3xl md:text-4xl font-serif text-[#1C4571] leading-tight">
                         Why Choose Feathers Healthcare?
                     </h2>
 
@@ -187,7 +189,7 @@ const FounderSection = () => {
 
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <h2 className="text-2xl md:text-4xl font-semibold">
+                    <h2 className="text-2xl md:text-4xl font-semibold text-[#1C4571]">
                         Meet Our Core Team
                     </h2>
                     <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
@@ -233,123 +235,44 @@ const FounderSection = () => {
                             className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover"
                         />
                     </div>
-
                 </div>
-
-                {/* BOX 2 */}
-                {/* <div className="bg-[#f5e9e7] p-6 md:p-8 rounded-xl grid md:grid-cols-2 items-center gap-6">
-                    <div className="flex justify-center md:justify-start">
-                        <img
-                            src="doctors.jpg"
-                            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover"
-                        />
-                    </div>
-
-                    <div>
-                        <p className="text-gray-700">
-                            With extensive experience in nursing and patient care, our mission
-                            is to deliver trusted healthcare at home.
-                        </p>
-                        <p className="mt-4 font-semibold">Flora Saraswat</p>
-                        <p className="text-sm text-gray-600">Co-Founder</p>
-                    </div>
-                </div> */}
-
             </div>
         </section>
-
-        //     <section className="py-16 md:py-24 px-4 bg-white">
-        //   <div className="max-w-6xl mx-auto">
-
-        //     {/* 🔹 TOP HEADING */}
-        //     <div className="text-center max-w-3xl mx-auto mb-12">
-        //       <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">
-        //         Top Elderly Care Services in Noida
-        //       </h2>
-
-        //       <p className="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
-        //         At FeathersCare, we begin at home & at the heart of our leadership. Our
-        //         core team brings together years of experience in healthcare and caregiving.
-        //       </p>
-        //     </div>
-
-        //     {/* 🔸 BOX 1 */}
-        //     <div className="bg-[#f5e9e7] p-6 md:p-8 rounded-xl mb-10">
-        //       <div className="grid md:grid-cols-2 gap-6 items-center">
-
-        //         {/* TEXT */}
-        //         <div>
-        //           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-        //             I started FeathersCare after spending nearly a decade as the primary
-        //             caregiver to my aging parents. With years in healthcare and caregiving,
-        //             I saw firsthand how fragmented and impersonal senior care can be.
-        //           </p>
-
-        //           <p className="mt-4 font-semibold text-gray-900">
-        //             Deepak Saraswat
-        //           </p>
-
-        //           <p className="text-sm text-gray-600">
-        //             Founder, FeathersCare
-        //           </p>
-        //         </div>
-
-        //         {/* IMAGE */}
-        //         <div className="flex justify-center md:justify-end">
-        //           <img
-        //             src="doctors.jpg"
-        //             alt="Founder"
-        //             className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover"
-        //           />
-        //         </div>
-
-        //       </div>
-        //     </div>
-
-        //     {/* 🔸 BOX 2 */}
-        //     <div className="bg-[#e9f0f8] p-6 md:p-8 rounded-xl">
-        //       <div className="grid md:grid-cols-2 gap-6 items-center">
-
-        //         {/* IMAGE */}
-        //         <div className="flex justify-center md:justify-start order-1 md:order-1">
-        //           <img
-        //             src="doctors.jpg"
-        //             alt="Care Expert"
-        //             className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover"
-        //           />
-        //         </div>
-
-        //         {/* TEXT */}
-        //         <div className="order-2 md:order-2">
-        //           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-        //             With over a decade of hands-on experience in nursing and elderly care,
-        //             our mission is to deliver compassionate, professional care that families
-        //             can trust.
-        //           </p>
-
-        //           <p className="mt-4 font-semibold text-gray-900">
-        //             Flora Saraswat
-        //           </p>
-
-        //           <p className="text-sm text-gray-600">
-        //             Co-Founder, FeathersCare
-        //           </p>
-        //         </div>
-
-        //       </div>
-        //     </div>
-
-        //   </div>
-        // </section>
-
 
     );
 };
 
 // 🔹 Main Component
 const AboutUs = () => {
+    const titleRef = useRef(null);
+    useEffect(() => {
+  gsap.fromTo(
+    titleRef.current.children,
+    { y: 30, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 80%",
+      },
+    }
+  );
+}, []);
     return (
         <>
+            <div ref={titleRef} className=" mt-20 text-center max-w-3xl mx-auto mb-16">
+                <h2 className="font-cormorant text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1C4571] mb-6 leading-relaxed">
+                    About Us
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                    Our dedicated team delivers comprehensive healthcare solutions in the comfort of your home, designed to enhance quality of life and promote independence.
+                </p>
+            </div>
+
             {/* 🔸 Section 1 (Text Left, Image Right) */}
             <AboutBlock
                 reverse={false}

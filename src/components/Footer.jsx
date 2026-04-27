@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="flex flex-col items-start">
             <Link to="/" className="flex items-center gap-2">
               <img
-                src="/Logo/f3.png"
+                src="/Logo/footer_logo.png"
                 alt="Feathers Logo"
                 className="h-16 w-auto object-contain"
               />

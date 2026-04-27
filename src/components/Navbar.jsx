@@ -62,7 +62,7 @@ const Navbar = () => {
           <div className="flex justify-start h-16 ">
             <Link to="/" className="flex items-center">
               <img
-                src="/Logo/f3.png"   // better use absolute path
+                src="/Logo/Feathers_Logooo.png"   // better use absolute path
                 alt="Feathers Logo"
                 className=" h-16 w-auto object-contain"
               />

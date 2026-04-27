@@ -209,7 +209,7 @@ const Contact = () => {
                   </div>
                   <div className="pt-0.5">
                     <h4 className="font-cormorant text-lg font-medium text-white">Phone</h4>
-                    <a   href="tel:+917982363899" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">+91 7982363899</a>
+                    <a href="tel:+917982363899" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">+91 7982363899</a>
                   </div>
                 </div>
               </div>
@@ -383,7 +383,7 @@ const Contact = () => {
           <div className="mt-10 w-full mx-auto rounded-xl overflow-hidden shadow-lg border border-white/10">
             <iframe
               title="Google Map"
-              src="https://maps.google.com/maps?q=ElderBlissCare&output=embed"
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1822.0829433752076!2d77.36517289376661!3d28.533457670529792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7dde6bd2d83%3A0x5729f632b2a82afb!2sFeathers%20Agency!5e0!3m2!1sen!2sin!4v1777265326012!5m2!1sen!2sin"
               className="w-full h-[350px] md:h-[400px] border-0"
               loading="lazy"
             ></iframe>

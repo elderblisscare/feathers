@@ -13,34 +13,34 @@ const MedicalServices = () => {
 
   useEffect(() => {
     // Heading animation
-    const headingElements = contentRef.current.querySelectorAll('h2, h3');
-    gsap.fromTo(headingElements, 
+    const headingElements = contentRef.current.querySelectorAll('h2, h3,.subtitle');
+    gsap.fromTo(headingElements,
       { y: 30, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        stagger: 0.3, 
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.3,
         duration: 0.8,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 75%',
-        } 
+        }
       }
     );
-    
+
     // Service items animation
     const serviceItems = contentRef.current.querySelectorAll('.service-item');
-    gsap.fromTo(serviceItems, 
+    gsap.fromTo(serviceItems,
       { y: 40, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        stagger: 0.2, 
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
         duration: 0.7,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 65%',
-        } 
+        }
       }
     );
   }, []);
@@ -83,7 +83,7 @@ const MedicalServices = () => {
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div ref={contentRef} className="text-center mb-16">
           <h2 className="font-cormorant text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1C4571] mb-6">Medical Services</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="subtitle text-lg text-gray-600 max-w-3xl mx-auto">
             Comprehensive healthcare services tailored to your needs with compassionate care and professional expertise.
           </p>
         </div>
@@ -98,10 +98,10 @@ const MedicalServices = () => {
               </div>
               <h3 className="font-cormorant text-2xl font-semibold text-[#1C4571] mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
-              <button 
-              onClick={() => navigate("/inquiry", { state: { service: service.title } })}
-              //  onClick={() => navigate("/inquiry")} 
-               className="self-start mt-auto text-[#1C4571] font-semibold hover:text-[#3c80c8] transition-colors flex items-center">
+              <button
+                onClick={() => navigate("/inquiry", { state: { service: service.title } })}
+                //  onClick={() => navigate("/inquiry")} 
+                className="self-start mt-auto text-[#1C4571] font-semibold hover:text-[#3c80c8] transition-colors flex items-center">
                 Inquire
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

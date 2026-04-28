@@ -28,82 +28,10 @@ const InquiryForm = () => {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
-    // 🔹 Submit
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-    //     try {
-    //         const res = await fetch("http://localhost:5000/api/booking", {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(formData),
-    //         });
-
-    //         const data = await res.json();
-
-    //         alert(data.message || "Booking submitted ✅");
-
-    //         // Reset form
-    //         setFormData({
-    //             name: "",
-    //             phone: "",
-    //             email: "",
-    //             service: "",
-    //             message: "",
-    //         });
-
-    //     } catch (error) {
-    //         console.error(error);
-    //         alert("Something went wrong ❌");
-    //     }
-    // };
-
-    //     const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-    //     const formBody = new URLSearchParams();
-    //     formBody.append("name", formData.name);
-    //     formBody.append("phone", formData.phone);
-    //     formBody.append("email", formData.email);
-    //     formBody.append("service", formData.service);
-    //     formBody.append("message", formData.message);
-
-    //     try {
-    //         const res = await fetch("YOUR_GOOGLE_SCRIPT_WEB_APP_URL", {
-    //             method: "POST",
-    //             body: formBody
-    //         });
-
-    //         const text = await res.text();
-
-    //         if (text.includes("Success")) {
-    //             alert("Booking submitted ✅");
-    //         } else {
-    //             alert("Something went wrong ❌");
-    //         }
-
-    //         // Reset form
-    //         setFormData({
-    //             name: "",
-    //             phone: "",
-    //             email: "",
-    //             service: "",
-    //             message: "",
-    //         });
-
-    //     } catch (error) {
-    //         console.error(error);
-    //         alert("Error submitting form ❌");
-    //     }
-    // };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // 🔹 Google Sheet ke liye
+        //  Google Sheet ke liye
         const formBody = new URLSearchParams();
         formBody.append("name", formData.name);
         formBody.append("phone", formData.phone);
@@ -112,10 +40,10 @@ const InquiryForm = () => {
         formBody.append("message", formData.message);
 
         try {
-            // 🚀 Dono API ek saath hit karenge
+            //  Dono API ek saath hit karenge
             const [backendRes, sheetRes] = await Promise.all([
 
-                // 🔵 Node Backend
+                //  Node Backend
                 fetch("http://localhost:5000/api/booking", {
                     method: "POST",
                     headers: {
@@ -124,25 +52,25 @@ const InquiryForm = () => {
                     body: JSON.stringify(formData),
                 }),
 
-                // 🟢 Google Sheet
+                // Google Sheet
                 fetch("https://script.google.com/macros/s/AKfycbzeElJ9jylGvwRhvCOefLuMJDnARkt5uI8fAXOukwFpFmv-uCJhbNV0a00mbYpkOK6d/exec", {
                     method: "POST",
                     body: formBody
                 })
             ]);
 
-            // 🔹 Backend response
+            //  Backend response
             const backendData = await backendRes.json();
 
-            // 🔹 Sheet response
+            //  Sheet response
             const sheetText = await sheetRes.text();
 
             console.log("Backend:", backendData);
             console.log("Sheet:", sheetText);
 
-            alert("Booking submitted (Saved + Email + Sheet) ✅");
+            alert("Booking Enquiry submitted");
 
-            // 🔄 Reset form
+            // Reset form
             setFormData({
                 name: "",
                 phone: "",

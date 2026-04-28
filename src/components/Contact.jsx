@@ -33,18 +33,46 @@ const Contact = () => {
       return;
     }
 
+    // 🔹 Google Sheet ke liye
+    const formBody = new URLSearchParams();
+    formBody.append("name", formData.name);
+    formBody.append("phone", formData.phone);
+    formBody.append("email", formData.email);
+    formBody.append("subject", formData.subject);
+    formBody.append("message", formData.message);
+
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
 
-      const data = await res.json();
+      // 🚀 Dono API ek saath hit karenge
+      const [backendRes, sheetRes] = await Promise.all([
 
-      alert(data.message);
+        // Node Backend
+        fetch("http://localhost:5000/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }),
+
+        // Google Sheet
+        fetch("https://script.google.com/macros/s/AKfycbxnrgaqDQ1EnflrZJWPydgI4QIGwcjU_P_luYFZ-sYBpMFsYpN5sxJkWVR86rppdCic/exec", {
+          method: "POST",
+          body: formBody
+        })
+      ]);
+
+
+      //  Backend response
+      const backendData = await backendRes.json();
+
+      //  Sheet response
+      const sheetText = await sheetRes.text();
+
+      console.log("Backend:", backendData);
+      console.log("Sheet:", sheetText);
+
+      alert("Contact Send Successfully");
 
       // reset form
       setFormData({
@@ -258,6 +286,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full border border-gray-200 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571] transition-all bg-white/80 hover:bg-white"
@@ -281,6 +310,7 @@ const Contact = () => {
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
                       value={formData.phone}
                       onChange={(e) => {
                         const value = e.target.value.replace(/\D/g, ""); // only digits
@@ -312,6 +342,7 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full border border-gray-200 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571] transition-all bg-white/80 hover:bg-white"
@@ -333,6 +364,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="subject"
+                      name="subject"
                       value={formData.subject}
                       onChange={handleChange}
                       className="w-full border border-gray-200 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571] transition-all bg-white/80 hover:bg-white"
@@ -351,6 +383,7 @@ const Contact = () => {
                   <div className="relative group">
                     <textarea
                       id="message"
+                      name="message"
                       value={formData.message}
                       onChange={handleChange}
                       rows={3}
@@ -383,7 +416,7 @@ const Contact = () => {
           <div className="mt-10 w-full mx-auto rounded-xl overflow-hidden shadow-lg border border-white/10">
             <iframe
               title="Google Map"
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1822.0829433752076!2d77.36517289376661!3d28.533457670529792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7dde6bd2d83%3A0x5729f632b2a82afb!2sFeathers%20Agency!5e0!3m2!1sen!2sin!4v1777265326012!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1822.0829433752076!2d77.36517289376661!3d28.533457670529792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7dde6bd2d83%3A0x5729f632b2a82afb!2sFeathers%20Agency!5e0!3m2!1sen!2sin!4v1777265326012!5m2!1sen!2sin"
               className="w-full h-[350px] md:h-[400px] border-0"
               loading="lazy"
             ></iframe>

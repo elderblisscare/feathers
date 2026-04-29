@@ -33,7 +33,7 @@ const servicesData = [
       },
       {
         title: "Support During Hospitalization",
-        image: "/ServicesImg/AHS3.jpg",
+        image: "/ServicesImg/elderCare.jpg",
         features: [
           "Caregiver support",
           "Admission assistance",

@@ -309,7 +309,7 @@ const AllHealthServices = () => {
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="h-[220px] w-[300px] rounded-md shadow-lg border-2 border-blue-300 "
+                        className="h-[220px] w-[90%] rounded-md shadow-lg "
                       />
                     </div>
                   </div>

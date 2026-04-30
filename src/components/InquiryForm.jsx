@@ -123,7 +123,7 @@ const InquiryForm = () => {
                             </div>
                             <div className="pt-0.5">
                                 <h4 className="font-cormorant text-lg font-medium text-white">Email</h4>
-                                <a href="mailto:info@elderblisscare.com" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">info@elderblisscare.com</a>
+                                <a href="mailto:feathers.agency29@gmail.com" className="text-white/90 hover:text-[#ff8c39] transition-colors text-sm hover:underline">feathers.agency29@gmail.com</a>
                             </div>
                         </div>
 

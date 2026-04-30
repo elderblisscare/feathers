@@ -10,7 +10,7 @@ const navLinks = [
 ];
 
 const contactInfo = {
-  email: 'info@elderblisscare.com',
+  email: 'feathers.agency29@gmail.com',
   phone: '+91-9891177712'
 };
 

@@ -100,6 +100,8 @@ const Navbar = () => {
               href={`https://wa.me/${contactInfo.phone.replace(
                 /[^0-9]/g,
                 ""
+              )}?text=${encodeURIComponent(
+                "Hi, I need home healthcare service.\n\n• Patient name: \n• Age: \n• Location: \n• Service required: \n• Phone number: "
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -171,6 +173,8 @@ const Navbar = () => {
             href={`https://wa.me/${contactInfo.phone.replace(
               /[^0-9]/g,
               ""
+            )}?text=${encodeURIComponent(
+              "Hi, I need home healthcare service.\n\n• Patient name: \n• Age: \n• Location: \n• Service required: \n• Phone number: "
             )}`}
             target="_blank"
             rel="noopener noreferrer"

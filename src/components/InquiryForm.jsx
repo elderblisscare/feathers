@@ -44,7 +44,7 @@ const InquiryForm = () => {
             const [backendRes, sheetRes] = await Promise.all([
 
                 //  Node Backend
-                fetch("http://localhost:5000/api/booking", {
+                fetch("https://api-p3fcjtjysa-uc.a.run.app/api/booking", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

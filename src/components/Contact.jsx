@@ -47,7 +47,7 @@ const Contact = () => {
       const [backendRes, sheetRes] = await Promise.all([
 
         // Node Backend
-        fetch("http://localhost:5000/api/contact", {
+        fetch("https://api-p3fcjtjysa-uc.a.run.app/api/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

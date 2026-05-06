@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-[#012d61] text-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About us section */}
           <div className="flex flex-col items-start">
             <Link to="/" className="flex items-center gap-2">
@@ -38,21 +38,69 @@ const Footer = () => {
               <li><Link to="/#testimonials" className="hover:text-[#8aa6c9] transition-colors">User stories</Link></li>
               <li><Link to="/our-services" className="hover:text-[#8aa6c9] transition-colors">Health Services</Link></li>
               <li><Link to="/blogs" className="hover:text-[#8aa6c9] transition-colors">Blogs</Link></li>
-              <li><Link to="/franchise-partnership" className="hover:text-[#8aa6c9] transition-colors">Franchise Partnership</Link></li>
+              <li><Link to="/inquiry" className="hover:text-[#8aa6c9] transition-colors">Contact us</Link></li>
+              {/* <li><Link to="/franchise-partnership" className="hover:text-[#8aa6c9] transition-colors">Franchise Partnership</Link></li> */}
             </ul>
           </div>
 
-          {/* Support section */}
+          {/* ElderBlissCare Section */}
+          <div className="flex flex-col md:items-start items-start">
+            <h3 className="text-xl font-cormorant font-semibold mb-6">
+              Explore More Elder Related Services
+            </h3>
+
+            <div className="bg-white/5 border  border-white/10 rounded-2xl p-5 max-w-sm">
+
+              {/* Logo + Name */}
+              <div className="flex items-center gap-3">
+                <img
+                  src="/Logo/LOGO_elderbliss.jpeg"
+                  alt="ElderBlissCare Logo"
+                  className="h-12 w-12 object-cover rounded-full"
+                />
+
+                <div>
+                  <h4 className="text-lg font-semibold text-white">
+                    ElderBlissCare
+                  </h4>
+
+                  <p className="text-sm text-gray-400">
+                    SENIORCARE REDEFINED
+                  </p>
+                </div>
+              </div>
+
+              {/* Short Description */}
+              <p className="mt-4 text-sm leading-relaxed text-gray-300">
+                Elder Care at Home
+                {/* Home  Healthcare Services */}
+                {/* Trusted elder care and home healthcare services including nursing,
+                attendants, physiotherapy, and doctor visits at home. */}
+              </p>
+
+              {/* Website Link */}
+              <a
+                href="https://elderblisscare.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-5 text-sm text-[#8aa6c9] hover:text-white/70 transition-colors"
+              >
+                Visit Website →
+              </a>
+            </div>
+          </div>
+
+          {/* Support section
           <div className='flex flex-col md:items-center items-start'>
             <h3 className="text-xl font-cormorant font-semibold mb-6">Support</h3>
             <ul className="space-y-3 md:text-center text-left mt-4 text-sm leading-relaxed text-gray-300">
               <li><Link to="/emergency-support" className="hover:text-[#8aa6c9] transition-colors">Emergency support</Link></li>
               <li><Link to="/services" className="hover:text-[#8aa6c9] transition-colors">VAS services</Link></li>
-              <li><Link to="/inquiry" className="hover:text-[#8aa6c9] transition-colors">Contact us</Link></li>
+              
             </ul>
-          </div>
+          </div> */}
 
-          {/* Terms & Policies section */}
+          {/* Terms & Policies section
           <div className='flex flex-col md:items-end items-start '>
             <h3 className="text-xl font-cormorant font-semibold mb-6">Terms & Policies</h3>
             <ul className="space-y-3 md:text-right text-left mt-4 text-sm leading-relaxed text-gray-300">
@@ -61,7 +109,7 @@ const Footer = () => {
               <li><Link to="/terms-and-policies" className="hover:text-[#8aa6c9] transition-colors">Cookies policy</Link></li>
               <li><Link to="/terms-and-policies" className="hover:text-[#8aa6c9] transition-colors">Disclaimer</Link></li>
             </ul>
-          </div>
+          </div> */}
           {/* 
           Get the app section
           <div>
@@ -87,17 +135,56 @@ const Footer = () => {
         </div>
 
         {/* Bottom footer with copyright, feedback and social links */}
-        <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-          {/* Copyright and feedback */}
-          <div className="text-sm flex flex-col md:flex-row gap-4 md:gap-8">
-            <p className="text-white/70">Copyright &copy; 2026 Feathers.com</p>
-            <p>
-              For feedback email: <a href="mailto:feedback@feathers.com" className="text-[#8aa6c9] hover:underline">feedback@feathers.com</a>
-            </p>
+        <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
+
+          {/* Copyright */}
+          <div className="text-sm text-white/70">
+            <p>&copy; 2026 Feathers Agency. All Rights Reserved.</p>
+          </div>
+
+          {/* Terms & Policies */}
+          <div className="flex justify-start lg:justify-center">
+            <ul className="flex items-center gap-y-4 gap-x-2 text-sm text-white/70 whitespace-nowrap">
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+              <span>|</span>
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <span>|</span>
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Cookies Policy
+                </Link>
+              </li>
+              <span>|</span>
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Disclaimer
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Social media icons */}
-          <div className="flex space-x-6 justify-start md:justify-end">
+          <div className="flex space-x-6 justify-start lg:justify-end">
             <Link to="#" target='_blank' className=" bg-blue-500 text-white hover:bg-blue-600 p-2 rounded-full  transition-colors">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />

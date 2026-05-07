@@ -164,15 +164,15 @@ const Footer = () => {
                 </Link>
               </li>
               <span>|</span>
-              <li>
+              {/* <li>
                 <Link
                   to="/terms-and-policies"
                   className="hover:text-[#8aa6c9] transition-colors"
                 >
                   Cookies Policy
                 </Link>
-              </li>
-              <span>|</span>
+              </li> */}
+              {/* <span>|</span> */}
               <li>
                 <Link
                   to="/terms-and-policies"

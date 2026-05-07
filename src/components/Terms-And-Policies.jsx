@@ -11,7 +11,7 @@ const PoliciesPage = () => {
     { id: "terms", label: "Terms & Conditions" },
     { id: "privacy", label: "Privacy Policy" },
     { id: "disclaimer", label: "Disclaimer" },
-    { id: "cookies", label: "Cookies Policy" },
+    // { id: "cookies", label: "Cookies Policy" },
   ];
 
   return (
@@ -27,7 +27,7 @@ const PoliciesPage = () => {
       </p>
 
       {/* Tabs */}
-      <div className="grid grid-cols-2 md:grid-cols-4  border-2">
+      <div className="grid grid-cols-3 md:grid-cols-3  border-2">
         {tabs.map((tab) => (
           <button
             key={tab.id}
@@ -54,7 +54,7 @@ const PoliciesPage = () => {
 
         {activeTab === "disclaimer" && <Disclaimer/>}
 
-        {activeTab === "cookies" && <Cookies_Policy/>}
+        {/* {activeTab === "cookies" && <Cookies_Policy/>} */}
 
       </div>
     </div>

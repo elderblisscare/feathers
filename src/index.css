@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import "tailwindcss";
 
+body {
+    margin: 0;
+    font-family: Arial;
+    /* background: #f5f5f5; */
+}
+
 /* @font-face {
     font-family: "Modern Negra";
     src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
@@ -17,7 +23,7 @@
     --giulia-blue: #8aa6c9;
 }
 
-@theme{
+@theme {
     --font-display: "Kaushan Script", cursive;
 }
 
@@ -97,10 +103,10 @@ html {
 /* Navbar transition styles */
 nav {
     will-change: transform;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                background-color 0.3s ease,
-                box-shadow 0.3s ease,
-                padding 0.3s ease !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        padding 0.3s ease !important;
 }
 
 @utility flex-center {
@@ -207,8 +213,3 @@ nav {
         border-radius: 1rem;
     }
 }
-   
-        
-               
-   
-  

@@ -15,6 +15,7 @@ import Term_And_Policy_Page from "./pages/Term_And_Policy_Page";
 import BlogList from "./Blog/BlogsPage/BlogList";
 import BlogDetails from "./Blog/BlogDetails/BlogDetails";
 import ScrollToTop from "./components/ScrollToTop";
+import Chatbot from "./components/Chatbot";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
 
@@ -71,6 +72,7 @@ const App = () => {
           {/* Back to top button */}
           <ScrollToTop />
       </main>
+          <Chatbot />
     </Router>
   )
 }

@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-[#012d61] text-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12">
         {/* Main footer content */}
-        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About us section */}
           <div className="flex flex-col items-start">
             <Link to="/" className="flex items-center gap-2">
@@ -30,13 +30,14 @@ const Footer = () => {
           </div>
           {/* Important Links */}
           <div className='flex flex-col md:items-center items-start'>
-            <h3 className="text-xl font-cormorant  font-semibold mb-6">Important Links</h3>
+            <h3 className="text-xl font-cormorant  font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3 md:text-center text-left mt-4 text-sm leading-relaxed text-gray-300">
-              <li><Link to="/about" className="hover:text-[#8aa6c9] transition-colors">About Feathers</Link></li>
+              <li><Link to="/" className="hover:text-[#8aa6c9] transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-[#8aa6c9] transition-colors">About Us</Link></li>
               {/* <li><Link to="/membership" className="hover:text-[#8aa6c9] transition-colors">Membership</Link></li> */}
               {/* <li><Link to="/media" className="hover:text-[#8aa6c9] transition-colors">Media</Link></li> */}
-              <li><Link to="/#testimonials" className="hover:text-[#8aa6c9] transition-colors">User stories</Link></li>
-              <li><Link to="/homecare" className="hover:text-[#8aa6c9] transition-colors">Homecare Services</Link></li>
+              {/* <li><Link to="/#testimonials" className="hover:text-[#8aa6c9] transition-colors">User stories</Link></li> */}
+              <li><Link to="/homecare" className="hover:text-[#8aa6c9] transition-colors">Healthcare Services</Link></li>
               <li><Link to="/equipment" className="hover:text-[#8aa6c9] transition-colors">Medical Equipment</Link></li>
               <li><Link to="/blogs" className="hover:text-[#8aa6c9] transition-colors">Blogs</Link></li>
               <li><Link to="/inquiry" className="hover:text-[#8aa6c9] transition-colors">Contact us</Link></li>
@@ -44,10 +45,52 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Contact Info */}
+          <div className='flex flex-col md:items-center items-start'>
+            <h3 className="text-xl font-cormorant  font-semibold mb-6">Contact Info</h3>
+
+            <div className="space-y-3 mt-4 md:text-center text-left  text-gray-300 text-sm">
+
+              <p className="flex items-center gap-3 hover:text-[#8aa6c9] transition-colors">
+                <div className="bg-gradient-to-br from-[#1C4571] to-[#2a5d94] p-2 rounded-full shadow-md flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <a
+                  href="https://maps.google.com/?q=Feathers Agency, D 29, Block D, Sector 105, Noida, Uttar Pradesh 201304"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 hover:text-[#8aa6c9] transition-colors"
+                ><span>D 29, Sector 105, Noida,  UP – 201304</span></a>
+              </p>
+
+              <p className="flex items-center gap-3 hover:text-[#8aa6c9] transition-colors">
+                <div className="bg-gradient-to-br from-[#1C4571] to-[#2a5d94] p-2 rounded-full shadow-md flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <a href="mailto:feathers.agency29@gmail.com"><span>feathers.agency@gmail.com</span></a>
+              </p>
+
+              <p className="flex items-center gap-3 hover:text-[#8aa6c9] transition-colors">
+                <div className="bg-gradient-to-br from-[#1C4571] to-[#2a5d94] p-2 rounded-full shadow-md flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <a href="tel:+919891177712" ><span>+919891177712</span></a>
+              </p>
+            </div>
+          </div>
+
           {/* ElderBlissCare Section */}
-          <div className="flex flex-col md:items-start items-start">
+          <div className="flex flex-col md:items-end items-start">
             <h3 className="text-xl font-cormorant font-semibold mb-6">
-              Explore More Elder Related Services
+              Explore More Services
+              {/* Elder Related */}
             </h3>
 
             <div className="bg-white/5 border mt-4 border-white/10 rounded-2xl p-5 max-w-sm">

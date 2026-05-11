@@ -29,9 +29,9 @@ const Footer = () => {
             </p>
           </div>
           {/* Important Links */}
-          <div className='flex flex-col md:items-center items-start'>
+          <div className='flex flex-col lg:items-center md:items-end items-start'>
             <h3 className="text-xl font-cormorant  font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3 md:text-center text-left mt-4 text-sm leading-relaxed text-gray-300">
+            <ul className="space-y-3 lg:text-center md:text-end text-start mt-4 text-sm leading-relaxed text-gray-300">
               <li><Link to="/" className="hover:text-[#8aa6c9] transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-[#8aa6c9] transition-colors">About Us</Link></li>
               {/* <li><Link to="/membership" className="hover:text-[#8aa6c9] transition-colors">Membership</Link></li> */}
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className='flex flex-col md:items-center items-start'>
+          <div className='flex flex-col lg:items-center md:items-start items-start'>
             <h3 className="text-xl font-cormorant  font-semibold mb-6">Contact Info</h3>
 
             <div className="space-y-3 mt-4 md:text-center text-left  text-gray-300 text-sm">
@@ -62,7 +62,6 @@ const Footer = () => {
                   href="https://maps.google.com/?q=Feathers Agency, D 29, Block D, Sector 105, Noida, Uttar Pradesh 201304"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-[#8aa6c9] transition-colors"
                 ><span>D 29, Sector 105, Noida,  UP – 201304</span></a>
               </p>
 

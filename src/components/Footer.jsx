@@ -49,7 +49,7 @@ const Footer = () => {
           <div className='flex flex-col lg:items-center md:items-start items-start'>
             <h3 className="text-xl font-cormorant  font-semibold mb-6">Contact Info</h3>
 
-            <div className="space-y-3 mt-4 md:text-center text-left  text-gray-300 text-sm">
+            <div className="space-y-3 mt-4  text-gray-300 text-sm">
 
               <p className="flex items-center gap-3 hover:text-[#8aa6c9] transition-colors">
                 <div className="bg-gradient-to-br from-[#1C4571] to-[#2a5d94] p-2 rounded-full shadow-md flex items-center justify-center">

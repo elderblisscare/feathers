@@ -36,7 +36,8 @@ const Footer = () => {
               {/* <li><Link to="/membership" className="hover:text-[#8aa6c9] transition-colors">Membership</Link></li> */}
               {/* <li><Link to="/media" className="hover:text-[#8aa6c9] transition-colors">Media</Link></li> */}
               <li><Link to="/#testimonials" className="hover:text-[#8aa6c9] transition-colors">User stories</Link></li>
-              <li><Link to="/our-services" className="hover:text-[#8aa6c9] transition-colors">Health Services</Link></li>
+              <li><Link to="/homecare" className="hover:text-[#8aa6c9] transition-colors">Homecare Services</Link></li>
+              <li><Link to="/equipment" className="hover:text-[#8aa6c9] transition-colors">Medical Equipment</Link></li>
               <li><Link to="/blogs" className="hover:text-[#8aa6c9] transition-colors">Blogs</Link></li>
               <li><Link to="/inquiry" className="hover:text-[#8aa6c9] transition-colors">Contact us</Link></li>
               {/* <li><Link to="/franchise-partnership" className="hover:text-[#8aa6c9] transition-colors">Franchise Partnership</Link></li> */}

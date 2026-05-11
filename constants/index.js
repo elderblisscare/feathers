@@ -2,8 +2,8 @@ const navLinks = [
   { id: 'home', title: 'Home' },
   { id: 'about', title: 'About Us' },
   // { id: 'medical-services', title: 'Medical Services' },
-  { id: 'equipment', title: 'Medical Equipment' },
-  { id: 'homecare', title: 'Homecare Services' },
+  { id: 'our-services', title: 'HealthCare Services' },
+  // { id: 'homecare', title: 'Homecare Services' },
 
   
  

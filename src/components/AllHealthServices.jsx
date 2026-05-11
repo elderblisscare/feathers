@@ -2,6 +2,86 @@ import React from "react";
 
 const servicesData = [
   {
+    category: "Home Care Services",
+    categoryDescription: [
+      "Our home care services bring professional healthcare directly to your doorstep, ensuring comfort and convenience without compromising quality. From doctor visits to 24/7 nursing care, we provide complete support tailored to individual needs.",
+
+      "We focus on personalized care that promotes faster recovery and better well-being. Whether it’s elderly care or lifestyle support, our trained professionals deliver compassionate and reliable services at home."
+    ],
+    items: [
+      {
+        title: "Doctor Home Visit",
+        image: "/ServicesImg/doctorVisit.jpg",
+        features: [
+          " In-home consultation",
+          "Diagnosis & treatment ",
+          " Follow-up visits"
+        ],
+        description: "Doctor consultation at home.",
+      },
+      {
+        title: "Physio Home Visit",
+        image: "/ServicesImg/physio.jpg",
+        features: [
+          "Personalized therapy ",
+          " Injury recovery",
+          " Mobility improvement"
+        ],
+        description: "Expert Physiotherapy sessions at home.",
+      },
+      {
+        title: "Professional Attendants",
+        image: "/ServicesImg/attendant.jpg",
+        features: [
+          " Daily care assistance",
+          " Hygiene support",
+          " Patient handling"
+        ],
+        description: "Daily care assistance. Trained attendants for everyday care needs.",
+      },
+      {
+        title: "Nurse 24 Hour Care",
+        image: "/ServicesImg/HM4.jpeg",
+        features: [
+          " 24/7 nursing support",
+          " Medication management",
+          "Critical care "
+        ],
+        description: "Continuous medical supervision at home.",
+      },
+      {
+        title: "Medicine Delivery",
+        image: "/ServicesImg/medicineDelivery.jpg",
+        features: [
+          " Timely delivery",
+          " Prescription management",
+            "Doorstep medicine support"
+        ],
+        description: "Convenient delivery services for patient needs.",
+      },
+      {
+        title: "Home Healthcare",
+        image: "/ServicesImg/AHS7.jpg",
+        features: [
+          " Comprehensive care",
+          " Chronic illness support",
+          " Rehab services"
+        ],
+        description: "Hospital-like care at home.",
+      },
+      {
+        title: "Lifestyle Support",
+        image: "/ServicesImg/HM7.jpg",
+        features: [
+          "Daily activity support ",
+          "Mental wellness ",
+          "Routine management "
+        ],
+        description: "Helps maintain a healthy and balanced lifestyle.",
+      },
+    ],
+  },
+  {
     category: "Medical Services",
     categoryDescription: [
       "Our medical services are designed to provide comprehensive and timely care for individuals of all age groups, from children to senior citizens. Whether it’s emergency response, doctor consultations, or continuous health monitoring, our team ensures that every patient receives personalized and professional attention.",
@@ -66,7 +146,7 @@ const servicesData = [
       },
       {
         title: "Trained Eldercare Professionals",
-        image: "/ServicesImg/AHS6.jpg",
+        image: "/ServicesImg/attendant.jpg",
         features: [
           "Skilled caregivers",
           "Personal elder support",
@@ -181,86 +261,6 @@ const servicesData = [
         title: "CPAP",
         image: "/ServicesImg/md16.png",
         description: "Airway pressure support device.",
-      },
-    ],
-  },
-  {
-    category: "Home Care Services",
-    categoryDescription: [
-      "Our home care services bring professional healthcare directly to your doorstep, ensuring comfort and convenience without compromising quality. From doctor visits to 24/7 nursing care, we provide complete support tailored to individual needs.",
-
-      "We focus on personalized care that promotes faster recovery and better well-being. Whether it’s elderly care or lifestyle support, our trained professionals deliver compassionate and reliable services at home."
-    ],
-    items: [
-      {
-        title: "Doctor Home Visit",
-        image: "/ServicesImg/doctorVisit.jpg",
-        features: [
-          " In-home consultation",
-          "Diagnosis & treatment ",
-          " Follow-up visits"
-        ],
-        description: "Doctor consultation at home.",
-      },
-      {
-        title: "Physio Home Visit",
-        image: "/ServicesImg/physio.jpg",
-        features: [
-          "Personalized therapy ",
-          " Injury recovery",
-          " Mobility improvement"
-        ],
-        description: "Expert Physiotherapy sessions at home.",
-      },
-      {
-        title: "Professional Attendants",
-        image: "/ServicesImg/AHS6.jpg",
-        features: [
-          " Daily care assistance",
-          " Hygiene support",
-          " Patient handling"
-        ],
-        description: "Daily care assistance. Trained attendants for everyday care needs.",
-      },
-      {
-        title: "Nurse 24 Hour Care",
-        image: "/ServicesImg/HM4.jpeg",
-        features: [
-          " 24/7 nursing support",
-          " Medication management",
-          "Critical care "
-        ],
-        description: "Continuous medical supervision at home.",
-      },
-      {
-        title: "Medicine & Food Delivery",
-        image: "/ServicesImg/medicineDelivery.jpg",
-        features: [
-          " Timely delivery",
-          " Prescription management",
-          " Healthy meals"
-        ],
-        description: "Convenient delivery services for patient needs.",
-      },
-      {
-        title: "Home Healthcare",
-        image: "/ServicesImg/AHS7.jpg",
-        features: [
-          " Comprehensive care",
-          " Chronic illness support",
-          " Rehab services"
-        ],
-        description: "Hospital-like care at home.",
-      },
-      {
-        title: "Lifestyle Support",
-        image: "/ServicesImg/HM7.jpg",
-        features: [
-          "Daily activity support ",
-          "Mental wellness ",
-          "Routine management "
-        ],
-        description: "Helps maintain a healthy and balanced lifestyle.",
       },
     ],
   },

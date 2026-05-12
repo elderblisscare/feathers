@@ -207,7 +207,7 @@ const Chatbot = () => {
 
       {open && (
         <div
-          className="fixed bottom-5 right-5 w-[360px] h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[999999]"
+          className="fixed bottom-5 right-5 w-[280px] h-[500px] md:w-[360px] md:h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[999999]"
           style={{
             position: "fixed",
           }}

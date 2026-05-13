@@ -256,16 +256,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom footer with copyright, feedback and social links */}
-        <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
+        {/* <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 items-center"> */}
+        <div className="mt-12 pt-8 border-t border-white/20  gap-6 items-center">
 
           {/* Copyright */}
-          <div className="text-sm text-white/70">
+          <div className="text-sm text-center text-white/70">
             <p>&copy; 2026 Feathers Agency. All Rights Reserved.</p>
-          </div>
-
-          {/* Terms & Policies */}
-          <div className="flex justify-start lg:justify-center">
-            <ul className="flex items-center gap-y-4 gap-x-2 text-sm text-white/70 whitespace-nowrap">
+            <ul className="flex justify-center items-center gap-y-4 gap-x-2 text-xs text-white/70 whitespace-nowrap">
               <li>
                 <Link
                   to="/terms-and-policies"
@@ -291,8 +288,8 @@ const Footer = () => {
                 >
                   Cookies Policy
                 </Link>
-              </li> */}
-              {/* <span>|</span> */}
+              </li>
+              <span>|</span> */}
               <li>
                 <Link
                   to="/terms-and-policies"
@@ -303,6 +300,47 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Terms & Policies */}
+          {/* <div className="flex justify-start lg:justify-center">
+            <ul className="flex items-center gap-y-4 gap-x-2 text-xs text-white/70 whitespace-nowrap">
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+              <span>|</span>
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <span>|</span>
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Cookies Policy
+                </Link>
+              </li>
+              <span>|</span>
+              <li>
+                <Link
+                  to="/terms-and-policies"
+                  className="hover:text-[#8aa6c9] transition-colors"
+                >
+                  Disclaimer
+                </Link>
+              </li>
+            </ul>
+          </div> */}
 
           {/* Social media icons */}
           {/* <div className="flex space-x-6 justify-start lg:justify-end">

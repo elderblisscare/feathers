@@ -205,7 +205,7 @@ const Chatbot = () => {
     // chatbot auto open after 2 seconds
     const timer = setTimeout(() => {
       setOpen(true);
-    }, 5000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

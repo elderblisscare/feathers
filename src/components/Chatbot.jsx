@@ -41,7 +41,7 @@ const chatbotFlow = {
   },
 
   service_type: {
-    message: "Select required service",
+    message: "Select required service : ",
     options: [
       {
         label: "Nursing Care",
@@ -82,7 +82,7 @@ const chatbotFlow = {
   },
 
   equipment: {
-    message: "Select required equipment",
+    message: "Select required equipment : ",
     options: [
       {
         label: "Oxygen Concentrator",
@@ -123,7 +123,7 @@ const chatbotFlow = {
   },
 
   doctor: {
-    message: "Select doctor consultation type",
+    message: "Select doctor consultation type : ",
     options: [
       {
         label: "General Physician",
@@ -146,7 +146,7 @@ const chatbotFlow = {
 
   // COMMON FLOW
   city: {
-    message: "Select your city",
+    message: "Select your city : ",
     options: [
       {
         label: "Delhi",
@@ -251,20 +251,30 @@ const Chatbot = () => {
   };
 
   const submitLead = async () => {
-    const data = {
-      ...selectedData,
-      ...formData,
-    };
-
-    console.log(data);
+    const conversation = messages
+      .map((msg, index) => {
+        return `${msg.type === "bot" ? "[BOT]" : "[USER]"}: ${msg.text}`;
+      })
+      .join("%0A");
 
     const whatsappMessage =
-      `New Elder Care Lead%0A%0A` +
+      `New Feathers Agency Lead %0A%0A` +
+
+      `-------Chat Conversation-------%0A` +
+      `${conversation}%0A%0A` +
+
+      `%0A` +
+
+      `----------Patient Details----------%0A` +
       `Name: ${formData.name}%0A` +
       `Phone: ${formData.phone}%0A` +
       `Age: ${formData.age}%0A` +
       `Gender: ${formData.gender}%0A` +
-      `Address: ${formData.address}`;
+      `Address: ${formData.address}%0A%0A` +
+
+      `%0A` +
+
+      `Sent from Feathers Agency Chatbot`;
 
     window.open(
       `https://wa.me/917701953989?text=${whatsappMessage}`,

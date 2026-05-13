@@ -12,15 +12,16 @@ const chatbotFlow = {
       },
       {
         label: "Medical Equipment",
-        next: "equipment",
+        next: "equipment_type",
       },
       {
         label: "Doctor Consultation",
-        next: "doctor",
+        next: "doctor_type",
       },
     ],
   },
 
+  // HOME CARE FLOW
   care_type: {
     message: "Who needs care support?",
     options: [
@@ -61,6 +62,89 @@ const chatbotFlow = {
     ],
   },
 
+  // EQUIPMENT FLOW
+  equipment_type: {
+    message: "Who needs medical equipment support?",
+    options: [
+      {
+        label: "Elderly Person",
+        next: "equipment",
+      },
+      {
+        label: "Patient Recovery",
+        next: "equipment",
+      },
+      {
+        label: "Bedridden Patient",
+        next: "equipment",
+      },
+    ],
+  },
+
+  equipment: {
+    message: "Select required equipment",
+    options: [
+      {
+        label: "Oxygen Concentrator",
+        next: "city",
+      },
+      {
+        label: "Hospital Bed",
+        next: "city",
+      },
+      {
+        label: "Wheelchair",
+        next: "city",
+      },
+      {
+        label: "BiPAP / CPAP",
+        next: "city",
+      },
+    ],
+  },
+
+  // DOCTOR FLOW
+  doctor_type: {
+    message: "Who needs doctor consultation?",
+    options: [
+      {
+        label: "Elderly Person",
+        next: "doctor",
+      },
+      {
+        label: "Patient Recovery",
+        next: "doctor",
+      },
+      {
+        label: "Bedridden Patient",
+        next: "doctor",
+      },
+    ],
+  },
+
+  doctor: {
+    message: "Select doctor consultation type",
+    options: [
+      {
+        label: "General Physician",
+        next: "city",
+      },
+      {
+        label: "Physiotherapist",
+        next: "city",
+      },
+      {
+        label: "Neurologist",
+        next: "city",
+      },
+      {
+        label: "Cardiologist",
+        next: "city",
+      },
+    ],
+  },
+
+  // COMMON FLOW
   city: {
     message: "Select your city",
     options: [
@@ -121,6 +205,8 @@ const Chatbot = () => {
     name: "",
     phone: "",
     age: "",
+    gender: "",
+    address: ""
   });
 
   const messagesEndRef = useRef(null);
@@ -176,7 +262,9 @@ const Chatbot = () => {
       `New Elder Care Lead%0A%0A` +
       `Name: ${formData.name}%0A` +
       `Phone: ${formData.phone}%0A` +
-      `Age: ${formData.age}`;
+      `Age: ${formData.age}%0A` +
+      `Gender: ${formData.gender}%0A` +
+      `Address: ${formData.address}`;
 
     window.open(
       `https://wa.me/917701953989?text=${whatsappMessage}`,
@@ -226,18 +314,16 @@ const Chatbot = () => {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`mb-4 ${
-                  msg.type === "user"
-                    ? "text-right"
-                    : "text-left"
-                }`}
+                className={`mb-4 ${msg.type === "user"
+                  ? "text-right"
+                  : "text-left"
+                  }`}
               >
                 <div
-                  className={`inline-block px-4 py-3 rounded-2xl max-w-[85%] text-sm ${
-                    msg.type === "user"
-                      ? "bg-green-600 text-white"
-                      : "bg-white shadow"
-                  }`}
+                  className={`inline-block px-4 py-3 rounded-2xl max-w-[85%] text-sm ${msg.type === "user"
+                    ? "bg-green-600 text-white"
+                    : "bg-white shadow"
+                    }`}
                 >
                   {msg.text}
                 </div>
@@ -297,6 +383,29 @@ const Chatbot = () => {
                     setFormData({
                       ...formData,
                       age: e.target.value,
+                    })
+                  }
+                />
+                <input
+                  type="text"
+                  placeholder="Patient Gender"
+                  className="border px-4 py-2 rounded-xl outline-none"
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      gender: e.target.value,
+                    })
+                  }
+                />
+
+                <input
+                  type="text"
+                  placeholder="Patient Address"
+                  className="border px-4 py-2 rounded-xl outline-none"
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      address: e.target.value,
                     })
                   }
                 />

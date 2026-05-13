@@ -395,7 +395,7 @@ const Chatbot = () => {
                 <input
                   type="text"
                   placeholder="Enter Name"
-                  className="border px-4 py-2 rounded-xl outline-none"
+                  className="border px-4 py-2 rounded-xl outline-none  focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -407,7 +407,7 @@ const Chatbot = () => {
                 <input
                   type="text"
                   placeholder="Enter Phone"
-                  className="border px-4 py-2 rounded-xl outline-none"
+                  className="border px-4 py-2 rounded-xl outline-none   focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -419,7 +419,7 @@ const Chatbot = () => {
                 <input
                   type="text"
                   placeholder="Patient Age"
-                  className="border px-4 py-2 rounded-xl outline-none"
+                  className="border px-4 py-2 rounded-xl outline-none  focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -430,7 +430,7 @@ const Chatbot = () => {
                 <input
                   type="text"
                   placeholder="Patient Gender"
-                  className="border px-4 py-2 rounded-xl outline-none"
+                  className="border px-4 py-2 rounded-xl outline-none  focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -442,7 +442,7 @@ const Chatbot = () => {
                 <input
                   type="text"
                   placeholder="Patient Address"
-                  className="border px-4 py-2 rounded-xl outline-none"
+                  className="border px-4 py-2 rounded-xl outline-none   focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,

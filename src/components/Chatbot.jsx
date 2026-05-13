@@ -48,11 +48,23 @@ const chatbotFlow = {
         next: "city",
       },
       {
+        label: "Doctor Visit",
+        next: "city",
+      },
+      {
         label: "Attendant",
         next: "city",
       },
       {
+        label: "Medicine Delivery",
+        next: "city",
+      },
+      {
         label: "Physiotherapy",
+        next: "city",
+      },
+      {
+        label: "Lab Test & Diagnostics",
         next: "city",
       },
       {

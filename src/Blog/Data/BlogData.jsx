@@ -7,7 +7,7 @@ export const blogs = [
         date: "April 14, 2026",
         author: "Feathers",
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
-        image: "../BlogImg/blog1.jpg",
+        image: "/BlogImg/blog1.jpg",
         tags: ["HOME CARE ATTENDANT"],
         content: [
             {
@@ -175,7 +175,7 @@ export const blogs = [
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
         date: "April 2026",
         readTime: "5 min read",
-        image: "../BlogImg/blog2.png",
+        image: "/BlogImg/blog2.png",
         category: "Physiotherapy",
         tags: ["PHYSIOTHERAPY"],
         content: [
@@ -308,7 +308,7 @@ export const blogs = [
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
         date: "April 2026",
         readTime: "5 min read",
-        image: "../BlogImg/blog3.jpg",
+        image: "/BlogImg/blog3.jpg",
         category: "Emergency Care",
         tags: ["EMERGENCY", "AMBULANCE"],
         content: [
@@ -441,7 +441,7 @@ export const blogs = [
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
         date: "April 2026",
         readTime: "5 min read",
-        image: "../BlogImg/blog4.jpg",
+        image: "/BlogImg/blog4.jpg",
         category: "Health Care",
         tags: ["HEALTHCARE"],
         content: [
@@ -561,7 +561,7 @@ export const blogs = [
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
         date: "April 2026",
         readTime: "5 min read",
-        image: "../BlogImg/blog5.jpg",
+        image: "/BlogImg/blog5.jpg",
         category: "Healthcare",
         tags: ["HEALTHCARE"],
         content: [
@@ -693,7 +693,7 @@ export const blogs = [
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
         date: "April 2026",
         readTime: "5 min read",
-        image: "../BlogImg/blog6.jpg",
+        image: "/BlogImg/blog6.jpg",
         category: "Lifestyle",
         tags: ["LIFESTYLE"],
         content: [
@@ -812,7 +812,7 @@ export const blogs = [
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
         date: "April 2026",
         readTime: "5 min read",
-        image: "../BlogImg/blog7.jpg",
+        image: "/BlogImg/blog7.jpg",
         category: "Convenience",
         tags: ["CONVENIENCE"],
         content: [
@@ -930,7 +930,7 @@ export const blogs = [
         authorImage: "/Testimonials_Img/deepak_founder.jpg",
         date: "April 2026",
         readTime: "6 min read",
-        image: "../BlogImg/blog8.jpg",
+        image: "/BlogImg/blog8.jpg",
         category: "Convenience",
         tags: ["NURSE"],
         content: [

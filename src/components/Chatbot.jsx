@@ -201,6 +201,15 @@ const chatbotFlow = {
 const Chatbot = () => {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    // chatbot auto open after 2 seconds
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const [messages, setMessages] = useState([
     {
       type: "bot",
@@ -292,6 +301,16 @@ const Chatbot = () => {
       `https://wa.me/917701953989?text=${whatsappMessage}`,
       "_blank"
     );
+
+    // const url1 = `https://wa.me/917701953989?text=${whatsappMessage}`;
+    // const url2 = `https://wa.me/919990825711?text=${whatsappMessage}`;
+
+    // window.open(url1, "_blank");
+
+    // // same tab after delay
+    // setTimeout(() => {
+    //   window.location.href = url2;
+    // }, 1500);
 
     setMessages((prev) => [
       ...prev,

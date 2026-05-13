@@ -328,9 +328,9 @@ const Chatbot = () => {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 bg-green-600 text-white p-4 rounded-full z-[999999] shadow-xl"
+          className="fixed bottom-5 right-5 bg-green-600 text-white p-3 rounded-full z-[999999] shadow-xl"
         >
-          <BsChatDotsFill size={24} />
+          <BsChatDotsFill size={16} />
         </button>
       )}
 

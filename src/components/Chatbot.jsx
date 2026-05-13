@@ -342,9 +342,17 @@ const Chatbot = () => {
           }}
         >
           <div className="bg-green-600 text-white p-4 flex justify-between items-center">
-            <h2 className="font-semibold text-lg">
-              Feathers Agency
-            </h2>
+            <div className="flex items-center gap-3">
+              <img
+                src="/Logo/green_logo.png"
+                alt="Feathers Agency Logo"
+                className="w-10 h-10 rounded-full object-cover bg-white p-1"
+              />
+
+              <h2 className="font-semibold text-lg">
+                Feathers Agency
+              </h2>
+            </div>
 
             <button onClick={() => setOpen(false)}>
               ✕

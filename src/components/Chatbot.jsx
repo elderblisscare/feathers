@@ -298,7 +298,7 @@ const Chatbot = () => {
       `Sent from Feathers Agency Chatbot`;
 
     window.open(
-      `https://wa.me/917701953989?text=${whatsappMessage}`,
+      `https://wa.me/919891177712?text=${whatsappMessage}`,
       "_blank"
     );
 

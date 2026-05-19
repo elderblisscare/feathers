@@ -327,6 +327,7 @@ const Chatbot = () => {
     <>
       {!open && (
         <button
+          id="chatbot-toggle"
           onClick={() => setOpen(true)}
           className="fixed bottom-5 right-2 md:right-5 bg-green-600 text-white p-3 rounded-full z-[999999] shadow-xl"
         >

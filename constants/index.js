@@ -3,6 +3,7 @@ const navLinks = [
   { id: 'about', title: 'About Us' },
   // { id: 'medical-services', title: 'Medical Services' },
   { id: 'our-services', title: 'HealthCare Services' },
+  { id: 'blogs', title: 'Blogs' },
   { id: 'inquiry', title: 'Service Inquiry' },
   // { id: 'homecare', title: 'Homecare Services' },
 

@@ -246,24 +246,39 @@ const FounderSection = () => {
 const AboutUs = () => {
     const titleRef = useRef(null);
     useEffect(() => {
-  gsap.fromTo(
-    titleRef.current.children,
-    { y: 30, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.2,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%",
-      },
-    }
-  );
-}, []);
+        gsap.fromTo(
+            titleRef.current.children,
+            { y: 30, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: 0.2,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: titleRef.current,
+                    start: "top 80%",
+                },
+            }
+        );
+    }, []);
     return (
         <>
+            {/* 🔹 HERO BANNER */}
+
+<div className="relative h-[60vh] w-full overflow-hidden">
+    <img
+        src="/ServicesImg/attendant.jpg"
+        alt="contact"
+        className="w-full h-full object-cover"
+    />
+
+    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <h1 className="text-white text-4xl md:text-6xl font-bold tracking-widest">
+            ABOUT
+        </h1>
+    </div>
+</div>
             <div ref={titleRef} className=" mt-20 text-center max-w-3xl mx-auto mb-16">
                 <h2 className="font-cormorant text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1C4571] mb-6 leading-relaxed">
                     About Us

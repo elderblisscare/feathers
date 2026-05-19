@@ -53,7 +53,7 @@ const App = () => {
 
   return (
     <Router>
-      <main className="bg-[#f5f5f5]">
+      <main className="bg-[#f5f5f5]  ">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />

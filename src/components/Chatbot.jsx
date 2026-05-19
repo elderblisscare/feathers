@@ -142,8 +142,8 @@ const chatbotFlow = {
         next: "city",
       },
       {
-        label: "Physiotherapist",
-        next: "Home Visit",
+        label: "Home visit",
+        next: "city",
       },
     ],
   },

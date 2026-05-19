@@ -191,6 +191,10 @@ const chatbotFlow = {
         next: "form",
       },
       {
+        label: "Tomorrow",
+        next: "form",
+      },
+      {
         label: "This Week",
         next: "form",
       },
@@ -272,28 +276,75 @@ const Chatbot = () => {
   };
 
   const submitLead = async () => {
+
+    /* VALIDATIONS */
+
+    if (formData.name.trim() === "") {
+
+      alert("Please enter patient name");
+      return;
+
+    }
+
+    if (formData.age === "") {
+
+      alert("Please select age group");
+      return;
+
+    }
+
+    if (formData.gender === "") {
+
+      alert("Please select gender");
+      return;
+
+    }
+
+    if (formData.phone.trim() === "") {
+
+      alert("Please enter phone number");
+      return;
+
+    }
+
+    if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+
+      alert("Please enter valid 10 digit phone number");
+      return;
+
+    }
+
+    if (formData.address.trim() === "") {
+
+      alert("Please enter address");
+      return;
+
+    }
+
+    /* CHAT CONVERSATION */
+
     const conversation = messages
-      .map((msg, index) => {
+      .filter((msg) => !msg.isFormData)
+      .map((msg) => {
         return `${msg.type === "bot" ? "[BOT]" : "[USER]"}: ${msg.text}`;
       })
       .join("%0A");
 
+    /* WHATSAPP MESSAGE */
+
     const whatsappMessage =
+
       `New Feathers Agency Lead %0A%0A` +
 
-      `-------Chat Conversation-------%0A` +
+      `------- Chat Conversation -------%0A` +
       `${conversation}%0A%0A` +
 
-      `%0A` +
-
-      `----------Patient Details----------%0A` +
+      `------- Patient Details -------%0A` +
       `Name: ${formData.name}%0A` +
       `Phone: ${formData.phone}%0A` +
-      `Age: ${formData.age}%0A` +
+      `Age Group: ${formData.age}%0A` +
       `Gender: ${formData.gender}%0A` +
       `Address: ${formData.address}%0A%0A` +
-
-      `%0A` +
 
       `Sent from Feathers Agency Chatbot`;
 
@@ -302,15 +353,7 @@ const Chatbot = () => {
       "_blank"
     );
 
-    // const url1 = `https://wa.me/917701953989?text=${whatsappMessage}`;
-    // const url2 = `https://wa.me/919990825711?text=${whatsappMessage}`;
-
-    // window.open(url1, "_blank");
-
-    // // same tab after delay
-    // setTimeout(() => {
-    //   window.location.href = url2;
-    // }, 1500);
+    /* THANK YOU MESSAGE */
 
     setMessages((prev) => [
       ...prev,
@@ -321,6 +364,7 @@ const Chatbot = () => {
     ]);
 
     setShowForm(false);
+
   };
 
   return (
@@ -401,10 +445,12 @@ const Chatbot = () => {
 
             {showForm && (
               <div className="bg-white p-4 rounded-2xl shadow mt-4 flex flex-col gap-3">
+
                 <input
                   type="text"
-                  placeholder="Enter Name"
-                  className="border px-4 py-2 rounded-xl outline-none  focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  placeholder="Enter Patient Name"
+                  required
+                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -414,9 +460,11 @@ const Chatbot = () => {
                 />
 
                 <input
-                  type="text"
-                  placeholder="Enter Phone"
-                  className="border px-4 py-2 rounded-xl outline-none   focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  type="tel"
+                  placeholder="Enter Phone Number"
+                  maxLength={10}
+                  required
+                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -425,33 +473,114 @@ const Chatbot = () => {
                   }
                 />
 
-                <input
-                  type="text"
-                  placeholder="Patient Age"
-                  className="border px-4 py-2 rounded-xl outline-none  focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                {/* <select
+                  required
+                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
                       age: e.target.value,
                     })
                   }
-                />
+                >
+
+                  <option value="">
+                    Select Age Group
+                  </option>
+
+                  <option value="Child">
+                    Child
+                  </option>
+
+                  <option value="Teenager">
+                    Teenager
+                  </option>
+
+                  <option value="Adult">
+                    Adult
+                  </option>
+
+                  <option value="Elder">
+                    Elder
+                  </option>
+
+                </select> */}
                 <input
-                  type="text"
-                  placeholder="Patient Gender"
-                  className="border px-4 py-2 rounded-xl outline-none  focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  type="number"
+                  placeholder="Enter Patient Age"
+                  min="1"
+                  max="120"
+                  required
+                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  onChange={(e) => {
+
+                    const age = e.target.value;
+
+                    let ageGroup = "";
+
+                    if (age <= 12) {
+
+                      ageGroup = "Child";
+
+                    }
+                    else if (age <= 19) {
+
+                      ageGroup = "Teenager";
+
+                    }
+                    else if (age <= 59) {
+
+                      ageGroup = "Adult";
+
+                    }
+                    else {
+
+                      ageGroup = "Elder";
+
+                    }
+
+                    setFormData({
+                      ...formData,
+                      age: `${age} (${ageGroup})`,
+                    });
+
+                  }}
+                />
+
+                <select
+                  required
+                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
                       gender: e.target.value,
                     })
                   }
-                />
+                >
+
+                  <option value="">
+                    Select Gender
+                  </option>
+
+                  <option value="Male">
+                    Male
+                  </option>
+
+                  <option value="Female">
+                    Female
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
 
                 <input
                   type="text"
-                  placeholder="Patient Address"
-                  className="border px-4 py-2 rounded-xl outline-none   focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  placeholder="Enter Address"
+                  required
+                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -462,10 +591,11 @@ const Chatbot = () => {
 
                 <button
                   onClick={submitLead}
-                  className="bg-green-600 text-white py-3 rounded-xl"
+                  className="bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition"
                 >
                   Submit
                 </button>
+
               </div>
             )}
 

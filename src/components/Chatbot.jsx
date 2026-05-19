@@ -138,20 +138,12 @@ const chatbotFlow = {
     message: "Select doctor consultation type : ",
     options: [
       {
-        label: "General Physician",
+        label: "Tele Consultation",
         next: "city",
       },
       {
         label: "Physiotherapist",
-        next: "city",
-      },
-      {
-        label: "Neurologist",
-        next: "city",
-      },
-      {
-        label: "Cardiologist",
-        next: "city",
+        next: "Home Visit",
       },
     ],
   },

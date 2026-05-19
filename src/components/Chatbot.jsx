@@ -152,12 +152,20 @@ const chatbotFlow = {
   city: {
     message: "Select your city : ",
     options: [
+            {
+        label: "Faridabad",
+        next: "timing",
+      },
       {
         label: "Delhi",
         next: "timing",
       },
       {
         label: "Noida",
+        next: "timing",
+      },
+            {
+        label: "Greater Noida",
         next: "timing",
       },
       {

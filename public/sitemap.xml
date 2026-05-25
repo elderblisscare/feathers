@@ -11,14 +11,19 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- <url>
-    <loc>https://feathers.agency/services</loc>
+  <url>
+    <loc>https://feathers.agency/our-services</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://feathers.agency/contact</loc>
+    <loc>https://feathers.agency/blogs</loc>
     <priority>0.8</priority>
-  </url> -->
+  </url>
+
+    <url>
+    <loc>https://feathers.agency/inquiry</loc>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>

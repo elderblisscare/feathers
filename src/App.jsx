@@ -11,6 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import InquirePage from "./pages/InquirePage";
 import AllServicesPage from "./pages/AllServicesPage";
+import ServiceDetailPage from "./pages/ServiceDetailPage";
 import Term_And_Policy_Page from "./pages/Term_And_Policy_Page";
 import BlogList from "./Blog/BlogsPage/BlogList";
 import BlogDetails from "./Blog/BlogDetails/BlogDetails";
@@ -62,6 +63,8 @@ const App = () => {
           <Route path="/homecare" element={<HomecareServicesPage />} />
           <Route path="/inquiry" element={<InquirePage />} />
           <Route path="/our-services" element={<AllServicesPage />} />
+          <Route path="/services" element={<AllServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetailPage />} />
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blogs/category/:tag" element={<BlogList />} />
           <Route path="/page/:pageNumber" element={<BlogList />} />

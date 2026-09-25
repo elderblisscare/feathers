@@ -32,7 +32,7 @@ export default function BlogDetails() {
 
                     <div className="flex flex-col items-center mt-4 mb-10">
                         <img
-                            src={blog.authorImage}
+                            src={blog.authorImage || "/Testimonials_Img/Deepak-Saraswat-1.avif"}
                             alt="author"
                             className="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow"
                         />
@@ -45,8 +45,8 @@ export default function BlogDetails() {
                         <p className="text-xs text-gray-500">
                             Author
                         </p>
-                        <p className="text-xs text-gray-500 mt-2">{blog.date} • {blog.readTime}</p>
-                        <p className="text-xs capitalize text-gray-500 mt-2">
+                        <p className="text-sm text-gray-500 mt-2">{blog.date} • {blog.readTime}</p>
+                        <p className="text-sm capitalize text-gray-500 mt-2">
                             <span className="font-bold">Category:</span> {blog.tags?.map(tag => tag.toLowerCase()).join(", ")}
                         </p>
                     </div>
@@ -54,7 +54,7 @@ export default function BlogDetails() {
                     <h1 className="text-4xl font-bold mt-6 text-center">{blog.title}</h1>
 
                     {/* Description */}
-                    <p className="text-gray-600 mt-2 mb-6 text-center">
+                    <p className="text-gray-600 text-lg md:text-xl mt-3 mb-6 text-center leading-relaxed max-w-3xl mx-auto">
                         {blog.description}
                     </p>
 
@@ -64,7 +64,7 @@ export default function BlogDetails() {
                         className="w-full h-100 object-cover rounded-xl"
                     />
 
-                    <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
+                    <div className="mt-6 space-y-4 text-gray-700 text-base md:text-lg leading-relaxed">
                         {blog.content.map((item, index) => {
 
                             if (item.type === "paragraph") {
@@ -88,7 +88,7 @@ export default function BlogDetails() {
 
                             if (item.type === "list") {
                                 return (
-                                    <ul key={index} className="list-disc pl-6 mb-4">
+                                    <ul key={index} className="list-disc pl-6 mb-4 space-y-1.5">
                                         {item.items.map((li, i) => (
                                             <li key={i}>{li}</li>
                                         ))}

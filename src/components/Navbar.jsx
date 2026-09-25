@@ -281,7 +281,7 @@ const Navbar = () => {
           <div className="flex justify-end items-center gap-3 w-full">
             {/* WhatsApp / Chatbot Button */}
             <button
-              className="hidden lg:flex bg-green-500 text-white p-2 rounded-full hover:bg-green-600 transition shadow-sm hover:shadow"
+              className="hidden lg:flex bg-green-500 text-white p-2 rounded-full hover:bg-green-600 hover:scale-105 active:scale-95 transition-all shadow-sm hover:shadow cursor-pointer"
               aria-label="Chatbot toggle"
               onClick={() => {
                 const chatbotBtn = document.getElementById("chatbot-toggle");

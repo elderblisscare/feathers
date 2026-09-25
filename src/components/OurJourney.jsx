@@ -282,10 +282,9 @@ const OurJourney = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#C41E3A] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102f4f] tracking-tight">
             Our Journey
           </h2>
-          <div className="w-16 h-1 bg-[#C41E3A]/20 mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* 4 Statistics Cards Grid */}

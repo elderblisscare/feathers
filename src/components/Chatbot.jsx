@@ -359,7 +359,13 @@ const Chatbot = () => {
       ...prev,
       {
         type: "bot",
-        text: "Thank you! Our team will contact you shortly.",
+        text: "Thank you! Our care team will contact you shortly.",
+        options: [
+          {
+            label: "Start New Inquiry",
+            next: "start",
+          },
+        ],
       },
     ]);
 
@@ -373,51 +379,71 @@ const Chatbot = () => {
         <button
           id="chatbot-toggle"
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-2 md:right-5 bg-green-600 text-white p-3 rounded-full z-[999999] shadow-xl"
+          className="fixed bottom-5 right-4 md:right-6 bg-gradient-to-tr from-emerald-600 to-green-500 hover:from-emerald-700 hover:to-green-600 text-white p-3.5 md:p-4 rounded-full z-[999999] shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer flex items-center justify-center group"
+          aria-label="Open Chat with Feathers Agency"
         >
-          <BsChatDotsFill size={16} />
+          <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white"></span>
+          </span>
+          <BsChatDotsFill className="w-5 h-5 md:w-6 md:h-6 transform transition-transform group-hover:rotate-6" />
         </button>
       )}
 
       {open && (
         <div
-          className="fixed bottom-5 right-5 w-[280px] h-[500px] md:w-[360px] md:h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[999999]"
+          className="fixed bottom-4 sm:bottom-5 right-3 sm:right-6 w-[calc(100vw-1.5rem)] sm:w-[360px] md:w-[380px] h-[520px] md:h-[600px] max-h-[85vh] bg-white rounded-2xl shadow-2xl border border-gray-100 flex flex-col overflow-hidden z-[999999] transition-all duration-300"
           style={{
             position: "fixed",
           }}
         >
-          <div className="bg-green-600 text-white p-4 flex justify-between items-center">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-700 text-white px-4 py-3.5 flex justify-between items-center shadow-md">
             <div className="flex items-center gap-3">
-              <img
-                src="/Logo/green_logo.png"
-                alt="Feathers Agency Logo"
-                className="w-10 h-10 rounded-full object-cover bg-white p-1"
-              />
+              <div className="relative">
+                <img
+                  src="/Logo/green_logo.png"
+                  alt="Feathers Agency Logo"
+                  className="w-10 h-10 rounded-full object-cover bg-white p-1 shadow-sm"
+                />
+                <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-white rounded-full"></span>
+              </div>
 
-              <h2 className="font-semibold text-lg">
-                Feathers Agency
-              </h2>
+              <div>
+                <h2 className="font-semibold text-base sm:text-lg leading-tight">
+                  Feathers Agency
+                </h2>
+                <p className="text-xs text-emerald-100 flex items-center gap-1.5 mt-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse"></span>
+                  Online Support
+                </p>
+              </div>
             </div>
 
-            <button onClick={() => setOpen(false)}>
-              ✕
+            <button
+              onClick={() => setOpen(false)}
+              className="w-8 h-8 rounded-full flex items-center justify-center text-white/90 hover:text-white hover:bg-white/20 active:bg-white/30 transition-all duration-200 cursor-pointer"
+              aria-label="Close Chat"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 bg-gray-100">
+          {/* Messages & Options */}
+          <div className="flex-1 overflow-y-auto p-4 bg-slate-50 space-y-4">
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`mb-4 ${msg.type === "user"
-                  ? "text-right"
-                  : "text-left"
-                  }`}
+                className={`${msg.type === "user" ? "text-right" : "text-left"}`}
               >
                 <div
-                  className={`inline-block px-4 py-3 rounded-2xl max-w-[85%] text-sm ${msg.type === "user"
-                    ? "bg-green-600 text-white"
-                    : "bg-white shadow"
-                    }`}
+                  className={`inline-block px-4 py-3 rounded-2xl max-w-[85%] text-sm leading-relaxed ${
+                    msg.type === "user"
+                      ? "bg-emerald-600 text-white rounded-tr-xs shadow-sm font-medium"
+                      : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-tl-xs"
+                  }`}
                 >
                   {msg.text}
                 </div>
@@ -433,9 +459,12 @@ const Chatbot = () => {
                             option.next
                           )
                         }
-                        className="border border-green-600 text-green-600 px-4 py-2 rounded-xl text-left hover:bg-green-50 transition"
+                        className="w-full border-2 border-emerald-600/70 bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-xl text-left text-sm transition-all duration-200 flex items-center justify-between group hover:bg-emerald-600 hover:text-white hover:border-emerald-600 hover:shadow-md active:scale-[0.98] cursor-pointer shadow-xs"
                       >
-                        {option.label}
+                        <span className="transition-colors duration-200">{option.label}</span>
+                        <span className="text-emerald-600 group-hover:text-white transform group-hover:translate-x-1 transition-all duration-200 font-bold text-base">
+                          →
+                        </span>
                       </button>
                     ))}
                   </div>
@@ -444,13 +473,16 @@ const Chatbot = () => {
             ))}
 
             {showForm && (
-              <div className="bg-white p-4 rounded-2xl shadow mt-4 flex flex-col gap-3">
+              <div className="bg-white p-4 rounded-2xl shadow-md border border-gray-100 mt-4 flex flex-col gap-3">
+                <h3 className="text-sm font-bold text-gray-800 border-b border-gray-100 pb-2">
+                  Please Share Patient Details
+                </h3>
 
                 <input
                   type="text"
                   placeholder="Enter Patient Name"
                   required
-                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  className="w-full border-2 border-gray-200 hover:border-emerald-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 px-3.5 py-2.5 rounded-xl outline-none transition-all duration-200 text-sm text-gray-800 placeholder-gray-400 bg-white"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -464,7 +496,7 @@ const Chatbot = () => {
                   placeholder="Enter Phone Number"
                   maxLength={10}
                   required
-                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  className="w-full border-2 border-gray-200 hover:border-emerald-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 px-3.5 py-2.5 rounded-xl outline-none transition-all duration-200 text-sm text-gray-800 placeholder-gray-400 bg-white"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -473,83 +505,35 @@ const Chatbot = () => {
                   }
                 />
 
-                {/* <select
-                  required
-                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      age: e.target.value,
-                    })
-                  }
-                >
-
-                  <option value="">
-                    Select Age Group
-                  </option>
-
-                  <option value="Child">
-                    Child
-                  </option>
-
-                  <option value="Teenager">
-                    Teenager
-                  </option>
-
-                  <option value="Adult">
-                    Adult
-                  </option>
-
-                  <option value="Elder">
-                    Elder
-                  </option>
-
-                </select> */}
                 <input
                   type="number"
                   placeholder="Enter Patient Age"
                   min="1"
                   max="120"
                   required
-                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  className="w-full border-2 border-gray-200 hover:border-emerald-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 px-3.5 py-2.5 rounded-xl outline-none transition-all duration-200 text-sm text-gray-800 placeholder-gray-400 bg-white"
                   onChange={(e) => {
-
                     const age = e.target.value;
-
                     let ageGroup = "";
-
                     if (age <= 12) {
-
                       ageGroup = "Child";
-
-                    }
-                    else if (age <= 19) {
-
+                    } else if (age <= 19) {
                       ageGroup = "Teenager";
-
-                    }
-                    else if (age <= 59) {
-
+                    } else if (age <= 59) {
                       ageGroup = "Adult";
-
-                    }
-                    else {
-
+                    } else {
                       ageGroup = "Elder";
-
                     }
-
                     setFormData({
                       ...formData,
                       age: `${age} (${ageGroup})`,
                     });
-
                   }}
                 />
 
                 <select
                   required
-                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  className="w-full border-2 border-gray-200 hover:border-emerald-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 px-3.5 py-2.5 rounded-xl outline-none transition-all duration-200 text-sm text-gray-800 bg-white cursor-pointer"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -557,30 +541,17 @@ const Chatbot = () => {
                     })
                   }
                 >
-
-                  <option value="">
-                    Select Gender
-                  </option>
-
-                  <option value="Male">
-                    Male
-                  </option>
-
-                  <option value="Female">
-                    Female
-                  </option>
-
-                  <option value="Other">
-                    Other
-                  </option>
-
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
 
                 <input
                   type="text"
                   placeholder="Enter Address"
                   required
-                  className="border px-4 py-2 rounded-xl outline-none focus:ring-1 focus:ring-[#1C4571] focus:border-[#1C4571]"
+                  className="w-full border-2 border-gray-200 hover:border-emerald-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 px-3.5 py-2.5 rounded-xl outline-none transition-all duration-200 text-sm text-gray-800 placeholder-gray-400 bg-white"
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -591,11 +562,10 @@ const Chatbot = () => {
 
                 <button
                   onClick={submitLead}
-                  className="bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition"
+                  className="cursor-pointer w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-semibold py-3 rounded-xl shadow-md hover:shadow-lg active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-2 mt-1"
                 >
-                  Submit
+                  Submit Details
                 </button>
-
               </div>
             )}
 

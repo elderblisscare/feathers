@@ -258,14 +258,14 @@ const Locations = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-5 line-clamp-2">
+                  <p className="text-gray-600 text-[15px] sm:text-base leading-relaxed mb-5">
                     {service.description}
                   </p>
 
                   {/* Micro-features Checkpoints */}
-                  <div className="space-y-2 mb-6 pt-3 border-t border-gray-100">
+                  <div className="space-y-2.5 mb-6 pt-3 border-t border-gray-100">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-xs text-gray-600 leading-snug">
+                      <div key={idx} className="flex items-start gap-2.5 text-sm text-gray-600 leading-snug">
                         <svg
                           className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"
                           fill="none"

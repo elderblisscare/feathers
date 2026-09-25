@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import OurJourney from '../components/OurJourney';
 import Locations from '../components/Locations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -29,6 +30,7 @@ const HomePage = () => {
       <main className='pt-20'>
         <Hero />
         <About />
+        <OurJourney />
         <Locations />
         <section id="testimonials">
           <Testimonials />

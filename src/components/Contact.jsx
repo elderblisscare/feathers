@@ -196,9 +196,9 @@ const Contact = () => {
             {/* Contact Information - more elegant design */}
             <div
               ref={infoRef}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-5 lg:p-6 text-white shadow-xl border border-white/10 hover:border-white/20 transition-all"
+              className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 lg:p-8 text-white shadow-2xl border border-white/15 hover:border-white/25 transition-all"
             >
-              <h2 className="font-cormorant text-white text-2xl mb-3 tracking-wider font-semibold">Contact Us</h2>
+              <h2 className="font-serif text-white text-3xl mb-4 tracking-wide font-bold">Contact Us</h2>
 
               <div className="space-y-4">
                 {/* Address */}
@@ -273,9 +273,9 @@ const Contact = () => {
             {/* Contact Form - enhanced design */}
             <div
               ref={formRef}
-              className="bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-5 lg:p-6 border border-white/20 transform transition-all"
+              className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-6 lg:p-8 border border-white/40 transform transition-all"
             >
-              <h3 className="text-xl font-cormorant font-bold text-[#1C4571] mb-4 relative inline-block">
+              <h3 className="text-2xl font-serif font-bold text-[#1C4571] mb-5 relative inline-block">
                 Send Us a Message
                 <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-gradient-to-r from-[#1C4571] to-transparent"></span>
               </h3>
@@ -413,7 +413,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mt-10 w-full mx-auto rounded-xl overflow-hidden shadow-lg border border-white/10">
+          <div className="mt-12 w-full mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/20">
             <iframe
               title="Google Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1822.0829433752076!2d77.36517289376661!3d28.533457670529792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7dde6bd2d83%3A0x5729f632b2a82afb!2sFeathers%20Agency!5e0!3m2!1sen!2sin!4v1777265326012!5m2!1sen!2sin"

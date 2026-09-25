@@ -172,13 +172,6 @@ const Locations = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* 🔹 SECTION HEADER */}
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-12 md:mb-16 pt-4">
-          {/* Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/80 shadow-xs mb-4">
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            <span className="text-xs font-bold tracking-wider text-blue-700 uppercase">
-              Clinically Supervised Home Healthcare
-            </span>
-          </div>
 
           {/* Title */}
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#102f4f] tracking-tight leading-tight mb-4">

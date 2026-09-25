@@ -52,13 +52,6 @@ const Hero = () => {
 
           {/* Text Overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center z-30 text-center px-4 md:px-8">
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full backdrop-blur-md bg-white/15 border border-white/25 text-white shadow-sm mb-4 sm:mb-6 animate-in fade-in slide-in-from-top-3">
-              <span className="w-2 h-2 rounded-full bg-pink-400 animate-pulse" />
-              <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase">
-                Trusted In-Home Healthcare Ecosystem
-              </span>
-            </div>
 
             {/* Hero Main Heading */}
             <h1 className="hero-text text-white mb-4 sm:mb-6 max-w-4xl">

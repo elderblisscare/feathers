@@ -88,9 +88,6 @@ const InquiryForm = () => {
     return (
         <>
             <div className="text-center pt-12 pb-2 px-4 bg-gray-50">
-                <span className="text-xs uppercase font-bold tracking-widest text-blue-600 bg-blue-100/70 px-3.5 py-1.5 rounded-full inline-block mb-3">
-                    24/7 Verified Healthcare Across Delhi NCR
-                </span>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102f4f] font-serif">
                     Healthcare Service Inquiry & Booking
                 </h1>

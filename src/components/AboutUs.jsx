@@ -99,10 +99,7 @@ const CorePillars = () => {
         <section className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-12">
-                    <span className="text-xs md:text-sm font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 px-3.5 py-1.5 rounded-full">
-                        Clinical & Care Principles
-                    </span>
-                    <h2 className="font-serif text-3xl md:text-4xl text-[#1C4571] mt-4 mb-3">
+                    <h2 className="font-serif text-3xl md:text-4xl text-[#1C4571] mb-3">
                         Our Core Pillars of Care
                     </h2>
                     <p className="text-gray-600 text-sm md:text-base leading-relaxed">
@@ -209,9 +206,6 @@ const StorySection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Story Text */}
                     <div className="space-y-6">
-                        <span className="text-xs md:text-sm font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 px-3.5 py-1.5 rounded-full">
-                            Our Story & Philosophy
-                        </span>
                         <h2 className="font-serif text-3xl md:text-5xl text-[#1C4571] leading-tight">
                             Where Clinical Rigor Meets Human Compassion
                         </h2>
@@ -297,10 +291,6 @@ const WhyChoose = () => {
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 {/* Text Content */}
                 <div className="space-y-6">
-                    <span className="text-xs md:text-sm font-semibold tracking-wider text-blue-600 uppercase bg-blue-100/70 px-3.5 py-1.5 rounded-full">
-                        Why Choose Feathers
-                    </span>
-
                     <h2 className="text-3xl md:text-4xl font-serif text-[#1C4571] leading-tight">
                         Why Families Across Delhi NCR Trust Feathers Healthcare
                     </h2>
@@ -430,9 +420,6 @@ const ConsultationBanner = () => {
     return (
         <section className="py-16 px-4 bg-[#1C4571] text-white">
             <div className="max-w-5xl mx-auto text-center space-y-6">
-                <span className="text-xs uppercase tracking-widest bg-white/10 text-blue-200 px-4 py-1.5 rounded-full font-semibold">
-                    Free Healthcare Assessment
-                </span>
                 <h2 className="text-3xl md:text-5xl font-serif leading-tight">
                     Need Trusted In-Home Care for Your Family?
                 </h2>
@@ -519,11 +506,6 @@ const AboutUs = () => {
                 {/* Hero Content */}
                 <div className="relative z-10 max-w-6xl mx-auto px-4 py-16 md:py-24 text-white">
                     <div ref={heroContentRef} className="max-w-3xl space-y-5">
-                        <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs md:text-sm font-medium tracking-wide">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span>Feathers Healthcare • Dedicated Home Care</span>
-                        </div>
-
                         <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-sm">
                             Caring with Compassion, Leading with Clinical Excellence
                         </h1>

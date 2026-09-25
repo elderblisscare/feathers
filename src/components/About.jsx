@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutBlock = ({
   reverse,
   image,
-  pill,
   title,
   subtitle,
   text1,
@@ -42,7 +41,7 @@ const AboutBlock = ({
 
     // Text animation
     const textElements = sectionRef.current.querySelectorAll(
-      ".text-content h1, .text-content h2, .text-content p, .text-content .action-btn, .text-content .pill-badge, .text-content .feature-item"
+      ".text-content h1, .text-content h2, .text-content p, .text-content .action-btn, .text-content .feature-item"
     );
 
     textElements.forEach((el, index) => {
@@ -74,15 +73,6 @@ const AboutBlock = ({
               reverse ? "lg:order-2 lg:pl-6" : "lg:pr-6"
             }`}
           >
-            {/* Pill Badge */}
-            {pill && (
-              <div className="pill-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/80 shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                <span className="text-xs font-bold tracking-wider text-blue-700 uppercase">
-                  {pill}
-                </span>
-              </div>
-            )}
 
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#102f4f] leading-tight font-bold tracking-tight">
               {title}
@@ -168,7 +158,6 @@ const About = () => {
       <AboutBlock
         reverse={false}
         image="aboutImg1.jpg"
-        pill="Compassionate Homecare"
         title="Compassionate Care Starts at Home"
         subtitle="Trusted Healthcare for Every Stage of Life"
         text1="At Feathers, we provide personalized healthcare services for seniors, adults, and children — ensuring comfort, safety, and expert medical support at home."
@@ -187,7 +176,6 @@ const About = () => {
       <AboutBlock
         reverse={true}
         image="aboutImg2.jpg"
-        pill="Clinical Excellence"
         title="Quality Care You Can Trust"
         subtitle="Dedicated to Your Health & Wellbeing"
         text1="We bring professional medical care directly to your home with a focus on comfort, dignity, and personalized attention."

@@ -153,9 +153,6 @@ const InquirySeoContent = () => {
       {/* 🔹 1. HOW IT WORKS / 3-STEP PROCESS */}
       <section className="py-16 px-6 lg:px-20 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs uppercase font-bold tracking-widest text-blue-600 bg-blue-100/70 px-3.5 py-1.5 rounded-full inline-block mb-3">
-            Simple & Transparent Process
-          </span>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#102f4f] font-serif">
             How Our Home Healthcare Booking Works
           </h2>
@@ -208,9 +205,6 @@ const InquirySeoContent = () => {
       <section className="py-16 bg-white border-y border-gray-200 px-6 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs uppercase font-bold tracking-widest text-blue-600 bg-blue-100/70 px-3.5 py-1.5 rounded-full inline-block mb-3">
-              Why Families Trust Us
-            </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-[#102f4f] font-serif">
               Trusted In-Home Healthcare Across Delhi NCR
             </h2>
@@ -274,9 +268,6 @@ const InquirySeoContent = () => {
       {/* 🔹 3. COMPREHENSIVE SERVICES DIRECTORY FOR INQUIRY */}
       <section className="py-16 px-6 lg:px-20 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs uppercase font-bold tracking-widest text-blue-600 bg-blue-100/70 px-3.5 py-1.5 rounded-full inline-block mb-3">
-            Services Catalog
-          </span>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#102f4f] font-serif">
             Healthcare Services Available for Home Booking
           </h2>
@@ -321,9 +312,6 @@ const InquirySeoContent = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#ff8c39] bg-white/10 px-3 py-1 rounded-full inline-block">
-                Coverage Areas
-              </span>
               <h2 className="text-3xl font-bold font-serif leading-tight">
                 Doorstep Healthcare Coverage Across Delhi NCR
               </h2>
@@ -393,9 +381,6 @@ const InquirySeoContent = () => {
       {/* 🔹 5. FAQ SECTION (HIGH VALUE SEO ACCORDION) */}
       <section className="py-16 px-6 lg:px-20 max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <span className="text-xs uppercase font-bold tracking-widest text-blue-600 bg-blue-100/70 px-3.5 py-1.5 rounded-full inline-block mb-3">
-            Got Questions?
-          </span>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#102f4f] font-serif">
             Frequently Asked Questions
           </h2>

@@ -58,11 +58,6 @@ const ServiceDetailPage = () => {
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               {/* Left Column: Text & CTA */}
               <div className="lg:col-span-7 space-y-5">
-                <div className="inline-flex items-center gap-2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-                  <span>★</span>
-                  <span>{service.badge}</span>
-                </div>
-
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#102f4f] leading-tight font-serif">
                   {service.title}
                 </h1>
@@ -154,10 +149,7 @@ const ServiceDetailPage = () => {
         {/* 🔹 KEY FEATURES & SERVICES OFFERED */}
         <section className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-              What We Offer
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 font-serif">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif">
               Comprehensive Care & Scope
             </h2>
             <p className="text-gray-600 text-sm md:text-base mt-2">
@@ -208,10 +200,7 @@ const ServiceDetailPage = () => {
               {/* Who Is It For */}
               <div className="space-y-6">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                    Target Candidates
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-3 font-serif">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif">
                     Who Needs This Service?
                   </h3>
                   <p className="text-gray-600 text-sm mt-2">
@@ -252,10 +241,7 @@ const ServiceDetailPage = () => {
         {/* 🔹 HOW IT WORKS (4 STEPS) */}
         <section className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-              Simple 4-Step Process
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 font-serif">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif">
               How Feathers Home Care Works
             </h2>
             <p className="text-gray-600 text-sm mt-2">
@@ -309,10 +295,7 @@ const ServiceDetailPage = () => {
         <section className="bg-white py-16 border-t border-gray-100">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-10">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                Got Questions?
-              </span>
-              <h2 className="text-3xl font-bold text-gray-900 mt-3 font-serif">
+              <h2 className="text-3xl font-bold text-gray-900 font-serif">
                 Frequently Asked Questions
               </h2>
             </div>
